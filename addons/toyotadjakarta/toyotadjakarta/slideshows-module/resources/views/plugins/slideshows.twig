@@ -1,0 +1,44 @@
+{{ asset_add("plugins.js", "toyotadjakarta.module.slideshows::bower/revslider/js/jquery.themepunch.tools.min.js") }}
+{{ asset_add("plugins.js", "toyotadjakarta.module.slideshows::bower/revslider/js/jquery.themepunch.revolution.min.js") }}
+{{ asset_add("plugins.js", "toyotadjakarta.module.slideshows::bower/revslider/js/extensions/revolution.extension.navigation.min.js") }}
+{{ asset_add("plugins.js", "toyotadjakarta.module.slideshows::bower/revslider/js/extensions/revolution.extension.slideanims.min.js") }}
+{{ asset_add("plugins.js", "toyotadjakarta.module.slideshows::bower/revslider/js/extensions/revolution.extension.video.min.js") }}
+{{ asset_add("plugins.js", "toyotadjakarta.module.slideshows::bower/revslider/js/revslider.js") }}
+{{ asset_add("plugins.css","toyotadjakarta.module.slideshows::bower/revslider/css/settings.css") }}
+
+<div id="rev_slider_1_1_wrapper"
+     class="rev_slider_wrapper fullwidthbanner-container"
+     style="margin:0px auto;background-color:transparent;padding:0px;margin-top:-35px;margin-bottom:0px;">
+
+    <!-- START REVOLUTION SLIDER 5.2.4.1 fullwidth mode -->
+    <div id="rev_slider_1_1" class="rev_slider fullwidthabanner"
+         style="display:none;" data-version="5.2.4.1">
+        <ul><!-- SLIDE  -->
+            {% for slide in slideshows %}
+            <li data-index="{{ slide.title }}"
+                data-transition="slotzoom-horizontal"
+                data-slotamount="default" data-hideafterloop="0"
+                data-hideslideonmobile="off"
+                data-easein="default" data-easeout="default"
+                data-masterspeed="default"
+                data-thumb="{{ slide.image.make().url() }}"
+                data-rotate="0" data-saveperformance="off"
+                data-title="Slide" data-param1="" data-param2=""
+                data-param3="" data-param4="" data-param5=""
+                data-param6="" data-param7="" data-param8=""
+                data-param9="" data-param10=""
+                data-description="">
+                <!-- MAIN IMAGE -->
+                <img src="{{ slide.image.make().url() }}"
+                     alt="{{ slide.summary }}"
+                     width="1460" height="456"
+                     data-bgposition="center center"
+                     data-bgfit="cover"
+                     data-bgrepeat="no-repeat"
+                     class="rev-slidebg" data-no-retina />
+                <!-- LAYERS -->
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>

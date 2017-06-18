@@ -1,0 +1,55 @@
+{% htmlcompress %}
+<!doctype html>
+<!--[if lt IE 7]>
+<html class="nojs ms lt_ie7" lang="en"><![endif]-->
+<!--[if IE 7]>
+<html class="nojs ms ie7" lang="en"><![endif]-->
+<!--[if IE 8]>
+<html class="nojs ms ie8" lang="en"><![endif]-->
+<!--[if gt IE 8]>
+<html class="nojs ms" lang="en"><![endif]-->
+<html lang="en">
+<head>
+    {% block metadata deferred %}
+    {% include "theme::partials/metadata" %}
+    {% endblock %}
+</head>
+<body class="home page-template page-template-templates page-template-template-full-notitle page-template-templatestemplate-full-notitle-php page page-id-797 group-blog responsive layout-full has-menu-search page-layout-default not-default-page mobilenav wpb-js-composer js-comp-ver-4.11.2 vc_responsive">
+<div id="page-wrapper">
+    {% include "theme::partials/header" %}
+    <div id="main" class="site-main">
+        <div class="full-container">
+            <div id="primary" class="content-area">
+                <div id="content" class="site-content" role="main">
+                    <article id="post-797" class="post-797 page type-page status-publish post">
+                        <div class="entry-main">
+                            <div class="entry-content">
+                                <div class="vc_row wpb_row vc_row-fluid">
+                                    <div class="wpb_column vc_column_container vc_col-sm-12">
+                                        <div class="vc_column-inner ">
+                                            <div class="wpb_wrapper">
+                                                <div class="wpb_text_column wpb_content_element">
+                                                    <div class="wpb_wrapper">
+                                                        {{ SlideshowPlugin() }}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                {% block content %}{% endblock %}
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% include "theme::partials/footer" %}
+</div>
+
+{% include "theme::partials/assets" %}
+
+</body>
+</html>
+{% endhtmlcompress %}

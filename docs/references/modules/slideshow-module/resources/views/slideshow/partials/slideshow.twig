@@ -1,0 +1,44 @@
+{{ asset_add("styles.css", "tusbol.module.slideshows::css/settings.css") }}
+{{ asset_add("scripts.js",  "tusbol.module.slideshows::js/jquery.themepunch.tools.min.js") }}
+{{ asset_add("scripts.js",  "tusbol.module.slideshows::js/jquery.themepunch.revolution.min.js") }}
+
+
+
+<div class="tp-banner-container">
+    <div class="tp-banner" >
+        <ul>
+            {% for slide in slideshow %}
+                <!-- SLIDE  -->
+            <li data-transition="fade" data-slotamount="5" data-masterspeed="700" >
+                <!-- MAIN IMAGE -->
+                <img src=" {{  slide.image.make.url }}" alt="{{  slide.image.make.description }}"  data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat">
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+
+<script type="text/javascript">
+
+    var revapi;
+
+    jQuery(document).ready(function() {
+
+        revapi = jQuery('.tp-banner').revolution(
+            {
+                delay:8000,
+                startwidth:1170,
+                startheight:645,
+                hideThumbs:10,
+                fullWidth:"off",
+                fullScreen:"off",
+                fullScreenOffsetContainer: "",
+                hideTimerBar: "on",
+                navigationType:"none",
+                stopAtSlide: 1
+
+            });
+
+    });	//ready
+
+</script>

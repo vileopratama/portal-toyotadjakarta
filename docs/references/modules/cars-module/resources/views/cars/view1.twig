@@ -1,0 +1,115 @@
+{% extends "theme::layouts/page" %}
+{% block content %}
+    <section class="b-detail s-shadow">
+    </section>
+
+    <div class="inner-page inventory-listing">
+        <div class="inventory-heading margin-bottom-10 clearfix">
+            <div class="row">
+                <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12">
+                    <h2>{{ car.name }}</h2>
+                    <span class="margin-top-10">{{ car.summary|slice(0, 80) }} ... </span>
+                </div>
+                <div class="col-lg-2 col-md-2 col-sm-2 text-right">
+                    <h2> {{ car.price.format("%.2f") }}</h2>
+                </div>
+            </div>
+        </div>
+
+        {% if car.models %}
+        <div class="content-nav margin-bottom-30">
+            <div class="row">
+                <ul>
+                    {% for model in car.models %}
+                        <li class="trade gradient_button"><a href="{{ url('cars/model', [model.slug]) }}" class="fancybox_div">{{ model.name }}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+        {% endif %}
+
+        <div class="row">
+            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 left-content padding-left-none">
+                <!--OPEN OF SLIDER-->
+                <div class="listing-slider">
+                    <section class="slider home-banner">
+                        <div class="flexslider" id="home-slider-canvas">
+                            {% if car.images %}
+                            <ul class="slides">
+                                {% for image in car.images %}
+                                    <li data-thumb="{{ image.name.make.url() }}">
+                                        <img src="{{ image.make.url() }}" data-full-image="{{ image.make.url() }}"/>
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                            {% endif %}
+                        </div>
+                    </section>
+                    <section class="home-slider-thumbs">
+                        <div class="flexslider" id="home-slider-thumbs">
+                            {% if car.images %}
+                            <ul class="slides">
+                                {% for image in car.images %}
+                                <li data-thumb="{{ image.name.make.fit(167,119).url() }}">
+                                    <a href="#">
+                                        <img src="{{ image.make.fit(167,119).url() }}" />
+                                    </a>
+                                </li>
+                                {% endfor %}
+                            </ul>
+                            {% endif %}
+                        </div>
+                    </section>
+                </div>
+                <!--CLOSE OF SLIDER-->
+                <!--Slider End-->
+                <div class="clearfix"></div>
+
+                <div class="bs-example bs-example-tabs example-tabs margin-top-50">
+                    <ul id="myTab" class="nav nav-tabs">
+                        <li class="active"><a href="#vehicle" data-toggle="tab">{{ trans('Summary') }}</a></li>
+                        <li><a href="#features" data-toggle="tab">{{ trans('Description') }}</a></li>
+                    </ul>
+                    <div id="myTabContent" class="tab-content margin-top-15 margin-bottom-20">
+                        <div class="tab-pane fade in active" id="vehicle">
+                            <p>{{ car.summary }}</p>
+                        </div>
+                        <div class="tab-pane fade" id="features">
+                            {{ car.description | raw }}
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 right-content padding-right-none">
+                <div class="side-content">
+                    <div class="efficiency-rating text-center padding-vertical-15 margin-bottom-40">
+                        <h3>Sales Ekskutif</h3>
+                        <img src="http://toyota-auto2000-medan.com//wp-content/uploads/2015/02/me.png" />
+                        <h4>Salmon</h4>
+                        <p>Seorang Sales Executive Tunas Toyota Radin Inten,Dapatkan promo khusus & penawaran menarik hubungi saya pada nomor kontak yang tersedia di bawah ini. Terima Kasih</p>
+                        <h5>0812830005227</h5>
+                        <p>*) WA dan SMS Aktif, Jika HP sedang sibuk, mohon tinggalkan pesan.Terima kasih</p>
+                    </div>
+
+                    {% set models = entries('cars','models').paginate()  %}
+                    {% if models %}
+                    <div class="list col-md-12 col-sm-3 padding-bottom-50">
+                        <h3 class="margin-bottom-25">Our Model</h3>
+                        <ul>
+                            {% for model in models %}
+                                <li><a href="{{ url('cars/model', [model.slug]) }}"><span>{{ model.name }}</span></a></li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+
+        <div class="clearfix"></div>
+
+
+    </div>
+{% endblock %}

@@ -1,0 +1,9 @@
+{
+    "name": "toyotadjakarta/slideshows-module",
+    "type": "streams-addon",
+    "autoload": {
+        "psr-4": {
+            "Toyotadjakarta\\SlideshowsModule\\": "src/"
+        }
+    }
+}

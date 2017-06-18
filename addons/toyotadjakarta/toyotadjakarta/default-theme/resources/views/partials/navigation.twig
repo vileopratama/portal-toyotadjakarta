@@ -1,0 +1,29 @@
+<!-- .site-navigation .main-navigation -->
+<nav role="navigation" class="site-navigation main-navigation primary use-sticky-menu">
+    <div class="full-container">
+        <div id="search-icon">
+            <div id="search-icon-icon">
+                <div class="vantage-icon-search"></div>
+            </div>
+            <form method="get" class="searchform" action="http://template.promo-toyota-mobil.com/" role="search">
+                <input type="text" class="field" name="s" value="" placeholder="Search"/>
+            </form>
+        </div>
+        <div id="so-mobilenav-standard-1" data-id="1" class="so-mobilenav-standard"></div>
+        <div class="menu-tunas-container">
+            {{ structure()
+            .linkAttributesDropdown({'data-toggle': 'dropdown'})
+            .listClass('menu')
+            .childListClass('sub-menu')
+            .render()|raw }}
+        </div>
+        <div id="so-mobilenav-mobile-1" data-id="1" class="so-mobilenav-mobile"></div>
+        <div class="menu-mobilenav-container">
+            <ul id="mobile-nav-item-wrap-1" class="menu">
+                <li><a href="#" class="mobilenav-main-link" data-id="1"><span class="mobile-nav-icon"></span>Menu</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- .site-navigation .main-navigation -->

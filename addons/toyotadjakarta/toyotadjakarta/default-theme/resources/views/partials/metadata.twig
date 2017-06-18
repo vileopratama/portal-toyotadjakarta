@@ -1,0 +1,48 @@
+<!-- Locale -->
+<meta http-equiv="Content-Language" content="{{ config('app.locale') }}">
+
+<!-- To the Future! -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<!-- Meta Tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width"/>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="generator" content="{{ config_get('streams::distribution.name') }}"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta name="description" content="{{ trans(template.meta_description) }}"/>
+<link rel="icon" href="{{ image_url('theme::img/logo_e-50x50.jpg') }}" sizes="32x32"/>
+<link rel="icon" href="{{ image_url('theme::img/logo_e.jpg') }}" sizes="192x192"/>
+
+{% block ogdata %}
+    <meta property="og:site_name" content="{{ setting_value('streams::name', config_get('streams::distribution.name')) }}"/>
+    <meta property="og:description" content="{{ trans(template.meta_description) }}"/>
+    <meta property="og:title" content="{{ trans(template.meta_title) }}"/>
+    <meta property="og:url" content="{{ url_current() }}"/>
+    <meta property="og:type" content="website"/>
+{% endblock %}
+
+<title>
+    {{ setting_value('streams::name', config_get('streams::distribution.name')) }}
+    &#8250;
+    {{ trans(template.meta_title) }}
+</title>
+
+{# Base Theme Components #}
+{{ asset_add("style.css", "theme::css/layouts/vantage/style.css") }}
+{{ asset_add("style.css", "theme::css/layouts/vantage/mobilenav.css") }}
+
+{# Important!! #}
+{{ constants() }}
+
+{# Include Styles Loaded From Outside #}
+{% for style in asset_styles("style.css") %}
+    {{ style|raw }}
+{% endfor %}
+
+
+{# Include Styles Loaded From Outside #}
+{% for plugin_style in asset_styles("plugins.css") %}
+    {{ plugin_style|raw }}
+{% endfor %}
+

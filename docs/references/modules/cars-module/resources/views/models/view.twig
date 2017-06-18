@@ -1,0 +1,58 @@
+{% extends "theme::layouts/posts" %}
+{% block content %}
+    {% set cars = models.cars().paginate() %}
+    {% set models = entries('cars','models').paginate() %}
+
+    <div class="row" style="margin-top: 30px;margin-bottom: 30px">
+        <div class="col-md-9 col-xs-12">
+            <div class="b-items__cars">
+                {% for car in cars %}
+                    <div class="b-items__cars-one wow zoomInUp" data-wow-delay="0.5s">
+                        <div class="b-items__cars-one-img">
+                            <img src="{{ car.image.url() }}" style="width: 270px;height:230px " alt='dodge' class="img-responsive"/>
+                        </div>
+
+                        <div class="b-items__cars-one-info">
+                            <header class="b-items__cars-one-info-header s-lineDownLeft">
+                                <h2>{{ car.name }}</h2>
+                                <span>{{ car.price|number_format(2, '.', ',') }}</span>
+                            </header>
+                            <p>
+                                {{ car.summary|slice(0, 300)|raw }}
+                            </p>
+                            <div class="b-items__cars-one-info-details">
+
+                                <a href="{{ car.route('view') }}" class="btn m-btn">VIEW DETAILS<span class="fa fa-angle-right"></span></a>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+
+            </div>
+
+            <div class="b-items__pagination wow zoomInUp" data-wow-delay="0.5s">
+                {{ cars.links|raw }}
+
+            </div>
+
+        </div>
+
+        <div class="col-md-3 col-xs-12">
+            <aside class="b-blog__aside">
+                <div class="b-blog__aside-categories wow zoomInUp" data-wow-delay="0.3s">
+                    <header class="s-lineDownLeft">
+                        <h2 class="s-titleDet">{{ trans('Our Model') }}</h2>
+                    </header>
+                    <nav>
+                        <ul class="b-blog__aside-categories-list">
+                            {% for model in models %}
+                                <li><a href="{{ model.route('view') }}">{{ model.name }}</a></li>
+                            {% endfor %}
+                        </ul>
+                    </nav>
+                </div>
+            </aside>
+
+        </div>
+    </div>
+{% endblock %}

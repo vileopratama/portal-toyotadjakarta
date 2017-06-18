@@ -1,0 +1,9 @@
+{
+    "name": "tusbol/slideshow-module",
+    "type": "streams-addon",
+    "autoload": {
+        "psr-4": {
+            "Tusbol\\SlideshowModule\\": "src/"
+        }
+    }
+}

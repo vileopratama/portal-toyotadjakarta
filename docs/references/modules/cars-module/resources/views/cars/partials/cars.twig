@@ -1,0 +1,25 @@
+<div class="car_listings boxed boxed_right col-md-12">
+    {% for car in cars %}
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <div class="inventory margin-bottom-20 clearfix scroll_effect fadeIn animated"
+                 style="visibility: visible; animation-name: fadeIn;min-height: 450px">
+                <a class="inventory" href="{{ url('cars/view', [car.slug]) }}">
+                    <div class="title">{{ car.name }}</div>
+                    <img src="{{ car.image.make.cropped().url() }}" class="preview" alt="preview">
+                    <p>{{ car.summary|slice(0, 200) }}</p>
+                    <div class="price" style="font-size: 18px"><br>
+                        {{ car.price.format("%.2f") }}
+                    </div>
+                    <div class="view-details gradient_button">
+                        <i class="fa fa-plus-circle"></i>
+                        {{ trans('Read More') }}
+                    </div>
+                    <div class="clearfix"></div>
+                </a>
+
+            </div>
+
+        </div>
+    {% endfor %}
+</div>
+

@@ -1,0 +1,137 @@
+{% extends "theme::layouts/page" %}
+{% block content %}
+    <section class="b-detail s-shadow">
+        <div class="container">
+            <div class="b-detail__head s-lineDownLeft wow zoomInUp" data-wow-delay="0.5s">
+                <div class="row">
+                    <div class="col-sm-9 col-xs-12">
+                        <div class="b-detail__head-title">
+                            <h1>{{ car.name }}</h1>
+                            <h3>{{ car.summary|slice(0,80) }} ..</h3>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 col-xs-12">
+                        <div class="b-detail__head-price">
+                            <div class="b-detail__head-price-num">{{ car.price.format("%.2f") }}</div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="b-detail__main">
+                <div class="row">
+                    <div class="col-md-8 col-xs-12">
+                        <div class="b-detail__main-info">
+                            <div class="b-detail__main-info-images wow zoomInUp" data-wow-delay="0.5s">
+                                <div class="row m-smallPadding">
+                                    <!--OPEN OF SLIDER-->
+                                    <div class="listing-slider">
+                                        <section class="slider home-banner">
+                                            <div class="flexslider" id="home-slider-canvas">
+                                                {% if car.images %}
+                                                    <ul class="slides">
+                                                        {% for image in car.images %}
+                                                            <li data-thumb="{{ image.name.make.url() }}">
+                                                                <img class="img-responsive" style="width: 100%" src="{{ image.make.url() }}" data-full-image="{{ image.make.url() }}"/>
+                                                            </li>
+                                                        {% endfor %}
+                                                    </ul>
+                                                {% endif %}
+                                            </div>
+                                        </section>
+                                        <section class="home-slider-thumbs">
+                                            <div class="flexslider" id="home-slider-thumbs">
+                                                {% if car.images %}
+                                                    <ul class="slides">
+                                                        {% for image in car.images %}
+                                                            <li data-thumb="{{ image.name.make.fit(167,119).url() }}">
+                                                                <a href="#">
+                                                                    <img src="{{ image.make.fit(167,119).url() }}" />
+                                                                </a>
+                                                            </li>
+                                                        {% endfor %}
+                                                    </ul>
+                                                {% endif %}
+                                            </div>
+                                        </section>
+                                    </div>
+                                    <!--CLOSE OF SLIDER-->
+                                </div>
+                            </div>
+
+                            <div class="b-detail__main-info-text wow zoomInUp" data-wow-delay="0.5s" style="margin-top: 30px">
+                                <div class="b-detail__main-aside-about-form-links">
+                                    <a href="#" class="j-tab m-active s-lineDownCenter" data-to='#info1'>{{ trans('Summary') }}</a>
+                                    <a href="#" class="j-tab" data-to='#info2'>{{ trans('Description') }}</a>
+                                </div>
+                                <div id="info1">
+                                    <p>{{ car.summary }}</p>
+                                </div>
+                                <div id="info2">
+                                    <p>{{ car.description|raw }}</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-xs-12">
+                        <aside class="b-detail__main-aside">
+                            <div class="b-detail__main-aside-about wow zoomInUp" data-wow-delay="0.5s">
+                                <h2 class="s-titleDet">{{ trans('Sales Executive') }}</h2>
+                                {% set sellers = entries('cars','sellers').get() %}
+                                {% for seller in sellers %}
+                                <div class="b-detail__main-aside-about-call">
+                                    <span class="fa fa-phone"></span>
+                                    <div>{{ seller.phone1 }}</div>
+                                    <p>{{ seller.biodata |raw}}</p>
+                                </div>
+                                <div class="b-detail__main-aside-about-seller">
+                                    <p><span>{{ seller.name }}</span></p>
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </aside>
+                        {% set models = entries('cars','models').get() %}
+                        <aside class="b-blog__aside" style="margin-top: 30px">
+                            <div class="b-blog__aside-popular wow zoomInUp" data-wow-delay="0.5s">
+                                <div class="s-lineDownLeft">
+                                    <h2 class="s-titleDet">{{ trans('Other Car') }}</h2>
+                                </div>
+                                <div class="b-blog__aside-popular-posts">
+                                    {% set latest_cars = entries('cars').where('id','<>',car.id).orderBy('created_at','asc').take(3).get() %}
+                                    {% if latest_cars %}
+                                        {% for row in latest_cars %}
+                                            <div class="b-blog__aside-popular-posts-one">
+                                                {% if row.image %}
+                                                    <img class="img-responsive" style="width: 100%" src="{{ row.image.make.fit(320,190).url() }}" alt="{{ row.name }}" />
+                                                {% endif %}
+                                                <h4><a href="{{ row.route('view') }}">{{ row.name }}</a></h4>
+                                                <div class="b-blog__aside-popular-posts-one-date">
+                                                    <p class="text-justify" style="font-weight: normal">{{ row.summary|slice(0,200) }}</p>
+                                                </div>
+                                            </div>
+                                        {% endfor %}
+                                    {% endif %}
+                                </div>
+                            </div>
+
+                            <div class="b-blog__aside-categories wow zoomInUp" data-wow-delay="0.3s">
+                                <div class="s-lineDownLeft">
+                                    <h2 class="s-titleDet">{{ trans('Our Model') }}</h2>
+                                </div>
+                                <nav>
+                                    <ul class="b-blog__aside-categories-list">
+                                        {% for model in models %}
+                                            <li><a href="{{ model.route('view') }}">{{ model.name }}</a></li>
+                                        {% endfor %}
+                                    </ul>
+                                </nav>
+                            </div>
+                        </aside>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!--b-detail-->
+{% endblock %}

@@ -1,0 +1,21 @@
+{#
+    Main CSS can be found in metadata.twig
+#}
+
+{# Core Theme Components #}
+{{ asset_add("web.js", "theme::bower/jquery/jquery.js") }}
+{{ asset_add("web.js", "theme::js/layouts/vantage/mobilenav.min.js") }}
+{# Include Scripts Loaded From Outside #}
+{% for script in asset_scripts("web.js") %}
+    {{ script|raw }}
+{% endfor %}
+
+{# Include Scripts Loaded From Outside #}
+{% for plugin_script in asset_scripts("plugins.js") %}
+    {{ plugin_script|raw }}
+{% endfor %}
+
+{% block javascripts %}
+{% endblock %}
+
+

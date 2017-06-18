@@ -1,0 +1,4 @@
+{% for locale in locales %}
+    <li><a class="{% if current.locale == locale.name %} active {% endif %}" href="{{ locale.url }}">{% if locale.name == 'en' %}  {{ image('theme::img/en.gif') }}  {% endif %} {% if locale.name == 'id' %}  {{ image('theme::img/id.gif') }}  {% endif %}{{ locale.name }} </a></li>
+
+{% endfor %}
