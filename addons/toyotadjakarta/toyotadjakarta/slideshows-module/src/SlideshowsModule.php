@@ -32,6 +32,13 @@ class SlideshowsModule extends Module
                 ]
             ]
         ],
+        'intros' => [
+            'buttons' => [
+                'create' => [
+                    'text' => 'Create a intro',
+                ]
+            ]
+        ],
 
     ];
 }

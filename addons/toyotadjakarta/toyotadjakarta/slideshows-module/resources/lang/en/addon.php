@@ -5,7 +5,8 @@ return [
     'name'        => 'Slideshows Module',
     'description' => '',
     'section'     => [
-        'slideshow' => 'Slideshow',
-        'welcomes' => "Welcome Page"
+        'slideshow' => "Slideshow",
+        'welcomes' => "Welcome Page",
+        'intros' => "Intro"
     ],
 ];

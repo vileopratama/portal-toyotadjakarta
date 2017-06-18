@@ -1,4 +1,5 @@
 {{ asset_add("plugins.css","toyotadjakarta.module.slideshows::bower/js_composer/css/js_composer.min.css") }}
+{{ asset_add("plugins.js","toyotadjakarta.module.slideshows::bower/js_composer/js/js_composer_front.min.js") }}
 
 {% set welcomes = entries('slideshows','welcomes').where('publish',1).get() %}
 {% for welcome in welcomes %}
