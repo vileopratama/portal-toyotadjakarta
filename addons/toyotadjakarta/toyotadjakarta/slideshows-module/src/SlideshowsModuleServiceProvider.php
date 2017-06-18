@@ -12,6 +12,7 @@ class SlideshowsModuleServiceProvider extends AddonServiceProvider
 
     protected $plugins = [
         \Toyotadjakarta\SlideshowsModule\SlideshowsPlugin::class,
+        \Toyotadjakarta\SlideshowsModule\WelcomesPlugin::class,
     ];
 
     protected $commands = [];

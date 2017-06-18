@@ -6,5 +6,6 @@ return [
     'description' => '',
     'section'     => [
         'slideshow' => 'Slideshow',
+        'welcomes' => "Welcome Page"
     ],
 ];

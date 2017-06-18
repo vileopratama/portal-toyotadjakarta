@@ -24,6 +24,14 @@ class SlideshowsModule extends Module
                     'text' => 'Create a slideshow',
                 ]
             ]
-        ]
+        ],
+        'welcomes' => [
+            'buttons' => [
+                'create' => [
+                    'text' => 'Create a welcome page',
+                ]
+            ]
+        ],
+
     ];
 }

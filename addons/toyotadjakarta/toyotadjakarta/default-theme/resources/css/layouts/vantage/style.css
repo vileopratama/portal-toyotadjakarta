@@ -3491,9 +3491,9 @@ body.layout-full {
 @font-face {
   font-family: 'vantage-icons';
   src: url('{{ asset_url("theme::fonts/vantage/vantage-icons.eot") }}');
-  src: url('{{ asset_url("theme::fonts/vantage/vantage-icons.eot?#iefix") }}') format('embedded-opentype'),
+  src: url('{{ asset_url("theme::fonts/vantage/vantage-icons.eot") }}') format('embedded-opentype'),
   url('{{ asset_url("theme::fonts/vantage/vantage-icons.woff") }}') format('woff'),
-  url('{{ asset_url("theme::fonts/vantage/vantage-icons.ttf?") }}') format('truetype'),
+  url('{{ asset_url("theme::fonts/vantage/vantage-icons.ttf") }}') format('truetype'),
   url('{{ asset_url("theme::fonts/vantage/vantage-icons.svg") }}') format('svg');
   font-weight: normal;
   font-style: normal;
