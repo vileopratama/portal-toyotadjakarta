@@ -1,6 +1,5 @@
 .coverage
 composer.lock
-/bin
 /build
 /coverage
 /node_modules
