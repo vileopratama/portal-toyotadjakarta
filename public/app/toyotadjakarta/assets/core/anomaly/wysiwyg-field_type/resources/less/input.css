@@ -1,0 +1,12 @@
+.has-danger .redactor-editor {
+  border-color: #ff3160;
+}
+.has-success .redactor-editor {
+  border-color: #47d165;
+}
+.has-info .redactor-editor {
+  border-color: #11bef6;
+}
+.has-warning .redactor-editor {
+  border-color: #ff754b;
+}

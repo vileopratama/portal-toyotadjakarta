@@ -2,32 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7a6eede6-7d09-44a8-aa87-76d2021a8458" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/addons/toyotadjakarta/toyotadjakarta/sales-module/resources/bower/plugins/testimoni_slick/js/testimoni_slick_main.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/addons/toyotadjakarta/toyotadjakarta/sales-module/resources/bower/vendor/slick-carousel/slick-theme.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/addons/toyotadjakarta/toyotadjakarta/sales-module/resources/bower/vendor/slick-carousel/slick.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/addons/toyotadjakarta/toyotadjakarta/sales-module/resources/bower/vendor/slick-carousel/slick.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/addons/toyotadjakarta/toyotadjakarta/sales-module/resources/bower/vendor/slick-carousel/wen-logo-slider-public.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/addons/toyotadjakarta/toyotadjakarta/sales-module/resources/lang/en/field.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/addons/toyotadjakarta/toyotadjakarta/sales-module/resources/views/plugins/testimoni-slick.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/addons/toyotadjakarta/toyotadjakarta/sales-module/src/Testimoni/Command/RenderTestimoniSlickPlugin.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/addons/toyotadjakarta/toyotadjakarta/sales-module/src/TestimoniSlickPlugin.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.env" afterPath="$PROJECT_DIR$/.env" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/addons/toyotadjakarta/toyotadjakarta/default-theme/resources/views/layouts/home.twig" afterPath="$PROJECT_DIR$/addons/toyotadjakarta/toyotadjakarta/default-theme/resources/views/layouts/home.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/addons/toyotadjakarta/toyotadjakarta/default-theme/resources/views/partials/assets.twig" afterPath="$PROJECT_DIR$/addons/toyotadjakarta/toyotadjakarta/default-theme/resources/views/partials/assets.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/addons/toyotadjakarta/toyotadjakarta/slideshows-module/migrations/2017_06_17_070702_toyotadjakarta.module.slideshows__create_slideshows_fields.php" afterPath="$PROJECT_DIR$/addons/toyotadjakarta/toyotadjakarta/slideshows-module/migrations/2017_06_17_070702_toyotadjakarta.module.slideshows__create_slideshows_fields.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/addons/toyotadjakarta/toyotadjakarta/slideshows-module/resources/lang/en/field.php" afterPath="$PROJECT_DIR$/addons/toyotadjakarta/toyotadjakarta/slideshows-module/resources/lang/en/field.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/addons/toyotadjakarta/toyotadjakarta/slideshows-module/resources/views/plugins/intros.twig" afterPath="$PROJECT_DIR$/addons/toyotadjakarta/toyotadjakarta/slideshows-module/resources/views/plugins/intros.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/autoload.php" afterPath="$PROJECT_DIR$/vendor/autoload.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/ClassLoader.php" afterPath="$PROJECT_DIR$/vendor/composer/ClassLoader.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/LICENSE" afterPath="$PROJECT_DIR$/vendor/composer/LICENSE" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_files.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_files.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_namespaces.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_namespaces.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_real.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_real.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/addons/toyotadjakarta/toyotadjakarta/default-theme/resources/js/vendor/underscore.min.js" afterPath="$PROJECT_DIR$/addons/toyotadjakarta/toyotadjakarta/default-theme/resources/bower/underscore/underscore.min.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -42,11 +17,12 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/docs/references/themes/toyotadjakarta/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="602">
-              <caret line="810" column="71" lean-forward="false" selection-start-line="810" selection-start-column="71" selection-end-line="810" selection-end-column="71" />
+            <state relative-caret-position="1256">
+              <caret line="395" column="62" lean-forward="false" selection-start-line="352" selection-start-column="52" selection-end-line="395" selection-end-column="62" />
               <folding>
                 <element signature="n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#article#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#style#0;n#h2#0;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#article#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -92,7 +68,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="slick.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="slick.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/addons/toyotadjakarta/toyotadjakarta/sales-module/resources/bower/vendor/slick-carousel/slick.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="225">
@@ -102,11 +78,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home.twig" pinned="false" current-in-tab="false">
+      <file leaf-file-name="home.twig" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/addons/toyotadjakarta/toyotadjakarta/default-theme/resources/views/layouts/home.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="359">
-              <caret line="79" column="77" lean-forward="false" selection-start-line="79" selection-start-column="77" selection-end-line="79" selection-end-column="77" />
+            <state relative-caret-position="384">
+              <caret line="63" column="77" lean-forward="false" selection-start-line="63" selection-start-column="77" selection-end-line="63" selection-end-column="77" />
               <folding />
             </state>
           </provider>
@@ -179,7 +155,6 @@
         <option value="$PROJECT_DIR$/storage/streams/toyotadjakarta/models/Slideshows/SlideshowsIntrosEntryTranslationsModel.php" />
         <option value="$PROJECT_DIR$/storage/streams/toyotadjakarta/models/Slideshows/SlideshowsIntrosEntryModel.php" />
         <option value="$PROJECT_DIR$/addons/toyotadjakarta/toyotadjakarta/slideshows-module/resources/lang/en/field.php" />
-        <option value="$PROJECT_DIR$/addons/toyotadjakarta/toyotadjakarta/default-theme/resources/views/layouts/home.twig" />
         <option value="$PROJECT_DIR$/addons/toyotadjakarta/toyotadjakarta/sales-module/src/SalesModuleServiceProvider.php" />
         <option value="$PROJECT_DIR$/addons/toyotadjakarta/toyotadjakarta/sales-module/src/Testimoni/Command/RenderTestimoniSlickPlugin.php" />
         <option value="$PROJECT_DIR$/addons/toyotadjakarta/toyotadjakarta/sales-module/src/TestimoniSlickPlugin.php" />
@@ -189,6 +164,7 @@
         <option value="$PROJECT_DIR$/addons/toyotadjakarta/toyotadjakarta/sales-module/resources/bower/vendor/slick-carousel/slick-theme.css" />
         <option value="$PROJECT_DIR$/addons/toyotadjakarta/toyotadjakarta/sales-module/resources/views/plugins/testimoni-slick.twig" />
         <option value="$PROJECT_DIR$/addons/toyotadjakarta/toyotadjakarta/sales-module/resources/bower/vendor/slick-carousel/slick.css" />
+        <option value="$PROJECT_DIR$/addons/toyotadjakarta/toyotadjakarta/default-theme/resources/views/layouts/home.twig" />
       </list>
     </option>
   </component>
@@ -1637,12 +1613,12 @@
       <workItem from="1497698019768" duration="13395000" />
       <workItem from="1497755953572" duration="5448000" />
       <workItem from="1497761894607" duration="526000" />
-      <workItem from="1497855248363" duration="10432000" />
+      <workItem from="1497855248363" duration="12273000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40402000" />
+    <option name="totallyTimeSpent" value="42243000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1849" height="1102" extended-state="6" />
@@ -2034,30 +2010,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/addons/toyotadjakarta/toyotadjakarta/default-theme/resources/views/layouts/home.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="359">
-          <caret line="79" column="77" lean-forward="false" selection-start-line="79" selection-start-column="77" selection-end-line="79" selection-end-column="77" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/addons/toyotadjakarta/toyotadjakarta/default-theme/resources/bower/underscore/underscore.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/references/themes/toyotadjakarta/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="602">
-          <caret line="810" column="71" lean-forward="false" selection-start-line="810" selection-start-column="71" selection-end-line="810" selection-end-column="71" />
-          <folding>
-            <element signature="n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#article#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2097,6 +2054,26 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="84" column="21" lean-forward="false" selection-start-line="84" selection-start-column="21" selection-end-line="84" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/references/themes/toyotadjakarta/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1256">
+          <caret line="395" column="62" lean-forward="false" selection-start-line="352" selection-start-column="52" selection-end-line="395" selection-end-column="62" />
+          <folding>
+            <element signature="n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#article#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#h2#0;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#article#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/addons/toyotadjakarta/toyotadjakarta/default-theme/resources/views/layouts/home.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="63" column="77" lean-forward="false" selection-start-line="63" selection-start-column="77" selection-end-line="63" selection-end-column="77" />
           <folding />
         </state>
       </provider>

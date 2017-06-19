@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 18, 2017 at 04:58 PM
+-- Generation Time: Jun 19, 2017 at 12:30 PM
 -- Server version: 10.1.22-MariaDB
 -- PHP Version: 7.1.4
 
@@ -136,7 +136,8 @@ INSERT INTO `toyotadjakarta_addons_modules` (`id`, `namespace`, `installed`, `en
 (11, 'anomaly.module.settings', 1, 1),
 (12, 'anomaly.module.users', 1, 1),
 (13, 'anomaly.module.variables', 1, 1),
-(14, 'toyotadjakarta.module.slideshows', 1, 1);
+(14, 'toyotadjakarta.module.slideshows', 1, 1),
+(15, 'toyotadjakarta.module.sales', 1, 1);
 
 -- --------------------------------------------------------
 
@@ -420,12 +421,29 @@ CREATE TABLE `toyotadjakarta_files_files` (
 --
 
 INSERT INTO `toyotadjakarta_files_files` (`id`, `sort_order`, `created_at`, `created_by_id`, `updated_at`, `updated_by_id`, `deleted_at`, `name`, `disk_id`, `folder_id`, `extension`, `size`, `mime_type`, `entry_id`, `entry_type`, `keywords`, `height`, `width`) VALUES
-(1, 1, '2017-06-17 11:39:51', 1, '2017-06-17 11:39:52', 1, NULL, 'slider-1-1460-x-456.jpg', 1, 1, 'jpg', 165724, 'image/jpeg', NULL, 'Anomaly\\Streams\\Platform\\Model\\Files\\FilesImagesEntryModel', NULL, '456', '1460'),
-(2, 2, '2017-06-17 11:51:06', 1, '2017-06-17 11:51:06', 1, NULL, 'slider-2-1460-x-456.jpg', 1, 1, 'jpg', 197797, 'image/jpeg', NULL, 'Anomaly\\Streams\\Platform\\Model\\Files\\FilesImagesEntryModel', NULL, '456', '1460'),
-(3, 3, '2017-06-17 11:51:37', 1, '2017-06-17 11:51:37', 1, NULL, 'sli1.jpg', 1, 1, 'jpg', 183601, 'image/jpeg', NULL, 'Anomaly\\Streams\\Platform\\Model\\Files\\FilesImagesEntryModel', NULL, '456', '1460'),
-(4, 4, '2017-06-18 06:36:58', 1, '2017-06-18 06:36:59', 1, NULL, '1-500-x-334.jpg', 1, 1, 'jpg', 60917, 'image/jpeg', NULL, 'Anomaly\\Streams\\Platform\\Model\\Files\\FilesImagesEntryModel', NULL, '334', '500'),
-(5, 5, '2017-06-18 07:04:42', 1, '2017-06-18 07:04:43', 1, NULL, '2-500-x-334.jpg', 1, 1, 'jpg', 62045, 'image/jpeg', NULL, 'Anomaly\\Streams\\Platform\\Model\\Files\\FilesImagesEntryModel', NULL, '334', '500'),
-(6, 6, '2017-06-18 07:04:54', 1, '2017-06-18 07:04:55', 1, NULL, '3-500-x-334.jpg', 1, 1, 'jpg', 63524, 'image/jpeg', NULL, 'Anomaly\\Streams\\Platform\\Model\\Files\\FilesImagesEntryModel', NULL, '334', '500');
+(1, 1, '2017-06-17 11:39:51', 1, '2017-06-17 11:39:52', 1, '2017-06-19 08:04:58', 'slider-1-1460-x-456.jpg', 1, 1, 'jpg', 165724, 'image/jpeg', NULL, 'Anomaly\\Streams\\Platform\\Model\\Files\\FilesImagesEntryModel', NULL, '456', '1460'),
+(2, 2, '2017-06-17 11:51:06', 1, '2017-06-17 11:51:06', 1, '2017-06-19 08:04:59', 'slider-2-1460-x-456.jpg', 1, 1, 'jpg', 197797, 'image/jpeg', NULL, 'Anomaly\\Streams\\Platform\\Model\\Files\\FilesImagesEntryModel', NULL, '456', '1460'),
+(3, 3, '2017-06-17 11:51:37', 1, '2017-06-17 11:51:37', 1, '2017-06-19 08:04:58', 'sli1.jpg', 1, 1, 'jpg', 183601, 'image/jpeg', NULL, 'Anomaly\\Streams\\Platform\\Model\\Files\\FilesImagesEntryModel', NULL, '456', '1460'),
+(4, 4, '2017-06-18 06:36:58', 1, '2017-06-18 06:36:59', 1, '2017-06-19 08:04:58', '1-500-x-334.jpg', 1, 1, 'jpg', 60917, 'image/jpeg', NULL, 'Anomaly\\Streams\\Platform\\Model\\Files\\FilesImagesEntryModel', NULL, '334', '500'),
+(5, 5, '2017-06-18 07:04:42', 1, '2017-06-18 07:04:43', 1, '2017-06-19 08:04:58', '2-500-x-334.jpg', 1, 1, 'jpg', 62045, 'image/jpeg', NULL, 'Anomaly\\Streams\\Platform\\Model\\Files\\FilesImagesEntryModel', NULL, '334', '500'),
+(6, 6, '2017-06-18 07:04:54', 1, '2017-06-18 07:04:55', 1, '2017-06-19 08:04:58', '3-500-x-334.jpg', 1, 1, 'jpg', 63524, 'image/jpeg', NULL, 'Anomaly\\Streams\\Platform\\Model\\Files\\FilesImagesEntryModel', NULL, '334', '500'),
+(7, 7, '2017-06-19 07:34:32', 1, '2017-06-19 07:34:34', 1, NULL, 'toyota-agya.jpg', 1, 1, 'jpg', 4716, 'image/jpeg', NULL, 'Anomaly\\Streams\\Platform\\Model\\Files\\FilesImagesEntryModel', NULL, '87', '140'),
+(8, 8, '2017-06-19 07:55:41', 1, '2017-06-19 07:55:41', 1, '2017-06-19 08:51:36', 'testimoni-10-2.jpg', 1, 1, 'jpg', 133121, 'image/jpeg', NULL, 'Anomaly\\Streams\\Platform\\Model\\Files\\FilesImagesEntryModel', NULL, '337', '322'),
+(9, 3, '2017-06-19 08:06:21', 1, '2017-06-19 08:06:22', 1, NULL, 'slider-1.jpg', 1, 1, 'jpg', 165724, 'image/jpeg', NULL, 'Anomaly\\Streams\\Platform\\Model\\Files\\FilesImagesEntryModel', NULL, '456', '1460'),
+(10, 3, '2017-06-19 08:06:21', 1, '2017-06-19 08:06:22', 1, NULL, 'slider-2.jpg', 1, 1, 'jpg', 197797, 'image/jpeg', NULL, 'Anomaly\\Streams\\Platform\\Model\\Files\\FilesImagesEntryModel', NULL, '456', '1460'),
+(11, 4, '2017-06-19 08:06:21', 1, '2017-06-19 08:06:22', 1, NULL, 'slider-3.jpg', 1, 1, 'jpg', 183601, 'image/jpeg', NULL, 'Anomaly\\Streams\\Platform\\Model\\Files\\FilesImagesEntryModel', NULL, '456', '1460'),
+(12, 6, '2017-06-19 08:29:35', 1, '2017-06-19 08:29:35', 1, NULL, 'intro-1.jpg', 1, 1, 'jpg', 60917, 'image/jpeg', NULL, 'Anomaly\\Streams\\Platform\\Model\\Files\\FilesImagesEntryModel', NULL, '334', '500'),
+(13, 7, '2017-06-19 08:29:35', 1, '2017-06-19 08:29:37', 1, NULL, 'intro-2.jpg', 1, 1, 'jpg', 62045, 'image/jpeg', NULL, 'Anomaly\\Streams\\Platform\\Model\\Files\\FilesImagesEntryModel', NULL, '334', '500'),
+(14, 7, '2017-06-19 08:29:35', 1, '2017-06-19 08:29:36', 1, NULL, 'intro-3.jpg', 1, 1, 'jpg', 63524, 'image/jpeg', NULL, 'Anomaly\\Streams\\Platform\\Model\\Files\\FilesImagesEntryModel', NULL, '334', '500'),
+(15, 8, '2017-06-19 08:51:54', 1, '2017-06-19 08:51:54', 1, NULL, 'testimoni-1.jpg', 1, 1, 'jpg', 133121, 'image/jpeg', NULL, 'Anomaly\\Streams\\Platform\\Model\\Files\\FilesImagesEntryModel', NULL, '337', '322'),
+(16, 9, '2017-06-19 08:53:50', 1, '2017-06-19 08:53:50', 1, NULL, 'testimoni-2.jpg', 1, 1, 'jpg', 118544, 'image/jpeg', NULL, 'Anomaly\\Streams\\Platform\\Model\\Files\\FilesImagesEntryModel', NULL, '337', '322'),
+(17, 10, '2017-06-19 09:07:36', 1, '2017-06-19 09:07:37', 1, NULL, 'testimoni-7.jpg', 1, 3, 'jpg', 114811, 'image/jpeg', NULL, 'Anomaly\\Streams\\Platform\\Model\\Files\\FilesTestimoniEntryModel', NULL, '337', '322'),
+(18, 10, '2017-06-19 09:07:36', 1, '2017-06-19 09:07:38', 1, NULL, 'testimoni-4.jpg', 1, 3, 'jpg', 96123, 'image/jpeg', NULL, 'Anomaly\\Streams\\Platform\\Model\\Files\\FilesTestimoniEntryModel', NULL, '337', '322'),
+(19, 11, '2017-06-19 09:07:36', 1, '2017-06-19 09:07:38', 1, NULL, 'testimoni-6.jpg', 1, 3, 'jpg', 108390, 'image/jpeg', NULL, 'Anomaly\\Streams\\Platform\\Model\\Files\\FilesTestimoniEntryModel', NULL, '337', '322'),
+(20, 13, '2017-06-19 09:07:39', 1, '2017-06-19 09:07:39', 1, NULL, 'testimoni-3.jpg', 1, 3, 'jpg', 117581, 'image/jpeg', NULL, 'Anomaly\\Streams\\Platform\\Model\\Files\\FilesTestimoniEntryModel', NULL, '337', '322'),
+(21, 14, '2017-06-19 09:07:40', 1, '2017-06-19 09:07:40', 1, NULL, 'testimoni-5.jpg', 1, 3, 'jpg', 109325, 'image/jpeg', NULL, 'Anomaly\\Streams\\Platform\\Model\\Files\\FilesTestimoniEntryModel', NULL, '337', '322'),
+(22, 15, '2017-06-19 09:14:21', 1, '2017-06-19 09:14:21', 1, NULL, 'testimoni-8.jpg', 1, 3, 'jpg', 229461, 'image/jpeg', NULL, 'Anomaly\\Streams\\Platform\\Model\\Files\\FilesTestimoniEntryModel', NULL, '475', '596'),
+(23, 16, '2017-06-19 10:27:07', 1, '2017-06-19 10:27:07', 1, NULL, 'welcome.jpg', 1, 1, 'jpg', 88356, 'image/jpeg', NULL, 'Anomaly\\Streams\\Platform\\Model\\Files\\FilesImagesEntryModel', NULL, '667', '600');
 
 -- --------------------------------------------------------
 
@@ -452,7 +470,8 @@ CREATE TABLE `toyotadjakarta_files_folders` (
 
 INSERT INTO `toyotadjakarta_files_folders` (`id`, `sort_order`, `created_at`, `created_by_id`, `updated_at`, `updated_by_id`, `deleted_at`, `disk_id`, `slug`, `allowed_types`) VALUES
 (1, 1, '2017-06-16 22:21:58', NULL, NULL, NULL, NULL, 1, 'images', 'a:3:{i:0;s:3:\"png\";i:1;s:4:\"jpeg\";i:2;s:3:\"jpg\";}'),
-(2, 2, '2017-06-16 22:22:00', NULL, NULL, NULL, NULL, 1, 'documents', 'a:2:{i:0;s:3:\"pdf\";i:1;s:4:\"docx\";}');
+(2, 2, '2017-06-16 22:22:00', NULL, NULL, NULL, NULL, 1, 'documents', 'a:2:{i:0;s:3:\"pdf\";i:1;s:4:\"docx\";}'),
+(3, 3, '2017-06-19 09:07:08', 1, NULL, NULL, NULL, 1, 'testimoni', 'a:0:{}');
 
 -- --------------------------------------------------------
 
@@ -478,7 +497,9 @@ CREATE TABLE `toyotadjakarta_files_folders_translations` (
 
 INSERT INTO `toyotadjakarta_files_folders_translations` (`id`, `entry_id`, `created_at`, `created_by_id`, `updated_at`, `updated_by_id`, `locale`, `name`, `description`) VALUES
 (1, 1, '2017-06-16 22:21:59', NULL, '2017-06-16 22:21:59', NULL, 'en', 'Images', 'A folder for images.'),
-(2, 2, '2017-06-16 22:22:01', NULL, '2017-06-16 22:22:01', NULL, 'en', 'Documents', 'A folder for documents.');
+(2, 2, '2017-06-16 22:22:01', NULL, '2017-06-16 22:22:01', NULL, 'en', 'Documents', 'A folder for documents.'),
+(3, 3, '2017-06-19 09:07:09', NULL, '2017-06-19 09:07:09', 1, 'en', NULL, NULL),
+(4, 3, '2017-06-19 09:07:09', NULL, '2017-06-19 09:07:09', 1, 'id', 'Testimoni', NULL);
 
 -- --------------------------------------------------------
 
@@ -503,6 +524,38 @@ CREATE TABLE `toyotadjakarta_files_images` (
 --
 
 CREATE TABLE `toyotadjakarta_files_images_translations` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `entry_id` int(11) NOT NULL,
+  `created_at` datetime NOT NULL,
+  `created_by_id` int(11) DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  `updated_by_id` int(11) DEFAULT NULL,
+  `locale` varchar(255) COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `toyotadjakarta_files_testimoni`
+--
+
+CREATE TABLE `toyotadjakarta_files_testimoni` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `sort_order` int(11) DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `created_by_id` int(11) DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  `updated_by_id` int(11) DEFAULT NULL,
+  `deleted_at` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `toyotadjakarta_files_testimoni_translations`
+--
+
+CREATE TABLE `toyotadjakarta_files_testimoni_translations` (
   `id` int(10) UNSIGNED NOT NULL,
   `entry_id` int(11) NOT NULL,
   `created_at` datetime NOT NULL,
@@ -598,7 +651,12 @@ INSERT INTO `toyotadjakarta_migrations` (`id`, `migration`, `batch`) VALUES
 (56, '2017_06_17_070702_toyotadjakarta.module.slideshows__create_slideshows_fields', 14),
 (57, '2017_06_17_070938_toyotadjakarta.module.slideshows__create_banners_stream', 14),
 (58, '2017_06_18_041609_toyotadjakarta.module.slideshows__create_welcomes_stream', 14),
-(59, '2017_06_18_055905_toyotadjakarta.module.slideshows__create_intros_stream', 14);
+(59, '2017_06_18_055905_toyotadjakarta.module.slideshows__create_intros_stream', 14),
+(70, '2017_06_19_050037_toyotadjakarta.module.sales__create_sales_fields', 15),
+(71, '2017_06_19_070745_toyotadjakarta.module.sales__create_models_stream', 15),
+(72, '2017_06_19_071035_toyotadjakarta.module.sales__create_products_stream', 15),
+(73, '2017_06_19_071703_toyotadjakarta.module.sales__create_testimonis_stream', 15),
+(74, '2017_06_19_072234_toyotadjakarta.module.sales__create_banners_stream', 15);
 
 -- --------------------------------------------------------
 
@@ -731,7 +789,7 @@ CREATE TABLE `toyotadjakarta_pages_default_pages` (
 --
 
 INSERT INTO `toyotadjakarta_pages_default_pages` (`id`, `sort_order`, `created_at`, `created_by_id`, `updated_at`, `updated_by_id`, `deleted_at`) VALUES
-(1, 1, '2017-06-16 22:22:09', NULL, NULL, NULL, NULL),
+(1, 1, '2017-06-16 22:22:09', NULL, NULL, NULL, '2017-06-19 10:11:30'),
 (2, 2, '2017-06-16 22:22:12', NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
@@ -792,8 +850,9 @@ CREATE TABLE `toyotadjakarta_pages_pages` (
 --
 
 INSERT INTO `toyotadjakarta_pages_pages` (`id`, `sort_order`, `created_at`, `created_by_id`, `updated_at`, `updated_by_id`, `deleted_at`, `str_id`, `slug`, `path`, `type_id`, `entry_id`, `entry_type`, `parent_id`, `visible`, `enabled`, `exact`, `home`, `theme_layout`) VALUES
-(1, 1, '2017-06-16 22:22:09', NULL, '2017-06-17 05:16:22', 1, NULL, 'IF03AeJuubJgYHOtBajYk3wx', 'home', '/', 1, 1, 'Anomaly\\Streams\\Platform\\Model\\Pages\\PagesDefaultPagesEntryModel', NULL, 1, 1, 1, 1, 'theme::layouts.home'),
-(2, 2, '2017-06-16 22:22:12', NULL, NULL, NULL, NULL, 'x3aqwWCCINQLpQc2mlrg7FyG', 'contact', '/contact', 1, 2, 'Anomaly\\Streams\\Platform\\Model\\Pages\\PagesDefaultPagesEntryModel', NULL, 1, 1, 1, 0, 'theme::layouts/default.twig');
+(1, 1, '2017-06-16 22:22:09', NULL, '2017-06-17 05:16:22', 1, '2017-06-19 10:11:28', 'IF03AeJuubJgYHOtBajYk3wx', 'home', '/', 1, 1, 'Anomaly\\Streams\\Platform\\Model\\Pages\\PagesDefaultPagesEntryModel', NULL, 1, 1, 1, 1, 'theme::layouts.home'),
+(2, 2, '2017-06-16 22:22:12', NULL, NULL, NULL, NULL, 'x3aqwWCCINQLpQc2mlrg7FyG', 'contact', '/contact', 1, 2, 'Anomaly\\Streams\\Platform\\Model\\Pages\\PagesDefaultPagesEntryModel', NULL, 1, 1, 1, 0, 'theme::layouts/default.twig'),
+(3, 1, '2017-06-19 10:11:51', 1, '2017-06-19 10:27:48', 1, NULL, 'ZQdIBwGFLraSU1AzLXaQqUr0', 'home', '/', 2, 1, 'Anomaly\\Streams\\Platform\\Model\\Pages\\PagesWelcomePagePagesEntryModel', NULL, 1, 1, 1, 1, 'theme::layouts.home');
 
 -- --------------------------------------------------------
 
@@ -834,7 +893,9 @@ CREATE TABLE `toyotadjakarta_pages_pages_translations` (
 
 INSERT INTO `toyotadjakarta_pages_pages_translations` (`id`, `entry_id`, `created_at`, `created_by_id`, `updated_at`, `updated_by_id`, `locale`, `title`, `meta_title`, `meta_description`, `meta_keywords`) VALUES
 (1, 1, '2017-06-16 22:22:11', NULL, '2017-06-17 05:12:39', 1, 'en', 'Home', NULL, NULL, 'a:0:{}'),
-(2, 2, '2017-06-16 22:22:13', NULL, '2017-06-16 22:22:13', NULL, 'en', 'Contact', NULL, NULL, NULL);
+(2, 2, '2017-06-16 22:22:13', NULL, '2017-06-16 22:22:13', NULL, 'en', 'Contact', NULL, NULL, NULL),
+(3, 3, '2017-06-19 10:11:51', NULL, '2017-06-19 10:21:42', 1, 'en', 'Home', NULL, NULL, 'a:0:{}'),
+(4, 3, '2017-06-19 10:11:51', NULL, '2017-06-19 10:11:51', 1, 'id', 'Home', NULL, NULL, 'a:0:{}');
 
 -- --------------------------------------------------------
 
@@ -861,7 +922,8 @@ CREATE TABLE `toyotadjakarta_pages_types` (
 --
 
 INSERT INTO `toyotadjakarta_pages_types` (`id`, `sort_order`, `created_at`, `created_by_id`, `updated_at`, `updated_by_id`, `deleted_at`, `slug`, `theme_layout`, `layout`, `handler`) VALUES
-(1, 1, '2017-06-16 22:22:06', NULL, NULL, NULL, NULL, 'default', 'theme::layouts/default.twig', '<h1>{{ page.title }}</h1>\n\n{{ page.content.render|raw }}', 'anomaly.extension.default_page_handler');
+(1, 1, '2017-06-16 22:22:06', NULL, NULL, NULL, NULL, 'default', 'theme::layouts/default.twig', '<h1>{{ page.title }}</h1>\n\n{{ page.content.render|raw }}', 'anomaly.extension.default_page_handler'),
+(2, 2, '2017-06-19 10:10:04', 1, '2017-06-19 10:29:46', 1, NULL, 'welcome_page', 'theme::layouts.home', '<h2 style=\"font-size: 20px;color: #000000;text-align: left\" class=\"vc_custom_heading\">PROMO TOYOTA JAKARTA TERBARU</h2>\r\n<section class=\"vc_cta3-container\">\r\n	<div class=\"vc_general vc_cta3 vc_cta3-style-classic vc_cta3-shape-rounded vc_cta3-align-left vc_cta3-color-classic vc_cta3-icon-size-md\">\r\n        <div class=\"vc_cta3_content-container\">\r\n            <div class=\"vc_cta3-content\">\r\n                    <p>\r\n						<a href=\"#\">\r\n							<img data-attachment-id=\"898\"\r\n                                data-permalink=\"https://www.toyotadjakarta.com/797-2/12-600-x-667#main\"\r\n                                data-orig-file=\"{{ page.image.make().url() }}\"\r\n                                data-orig-size=\"600,667\"\r\n                                data-comments-opened=\"1\"\r\n                                data-image-meta=\"{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;1&quot;}\"\r\n                                data-image-title=\"promo toyota jakarta\"\r\n                                data-image-description=\"\"\r\n                                data-medium-file=\"{{ page.image.make().url() }}\"\r\n                                data-large-file=\"{{ page.image.make().url() }}\"\r\n                                class=\"alignleft wp-image-898\"\r\n                                src=\"{{ page.image.make().url() }}\"\r\n                                alt=\"promo toyota jakarta\" width=\"240\"\r\n                                height=\"267\"\r\n                                srcset=\"{{ page.image.make().url() }} 270w, {{ page.image.make().url() }} 600w\"\r\n                                sizes=\"(max-width: 240px) 100vw, 240px\"/>\r\n						</a>\r\n                    </p>\r\n                    {{ page.content|raw }}\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </section>', 'anomaly.extension.default_page_handler');
 
 -- --------------------------------------------------------
 
@@ -886,7 +948,58 @@ CREATE TABLE `toyotadjakarta_pages_types_translations` (
 --
 
 INSERT INTO `toyotadjakarta_pages_types_translations` (`id`, `entry_id`, `created_at`, `created_by_id`, `updated_at`, `updated_by_id`, `locale`, `name`, `description`) VALUES
-(1, 1, '2017-06-16 22:22:07', NULL, '2017-06-16 22:22:07', NULL, 'en', 'Default', 'A simple page type.');
+(1, 1, '2017-06-16 22:22:07', NULL, '2017-06-16 22:22:07', NULL, 'en', 'Default', 'A simple page type.'),
+(2, 2, '2017-06-19 10:10:05', NULL, '2017-06-19 10:15:35', 1, 'en', 'Welcome Page', 'Welcome Page'),
+(3, 2, '2017-06-19 10:10:05', NULL, '2017-06-19 10:10:05', 1, 'id', 'Welcome Page', 'Welcome Page');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `toyotadjakarta_pages_welcome_page_pages`
+--
+
+CREATE TABLE `toyotadjakarta_pages_welcome_page_pages` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `sort_order` int(11) DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `created_by_id` int(11) DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  `updated_by_id` int(11) DEFAULT NULL,
+  `deleted_at` datetime DEFAULT NULL,
+  `image_id` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `toyotadjakarta_pages_welcome_page_pages`
+--
+
+INSERT INTO `toyotadjakarta_pages_welcome_page_pages` (`id`, `sort_order`, `created_at`, `created_by_id`, `updated_at`, `updated_by_id`, `deleted_at`, `image_id`) VALUES
+(1, 1, '2017-06-19 10:11:50', 1, '2017-06-19 10:27:48', 1, NULL, 23);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `toyotadjakarta_pages_welcome_page_pages_translations`
+--
+
+CREATE TABLE `toyotadjakarta_pages_welcome_page_pages_translations` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `entry_id` int(11) NOT NULL,
+  `created_at` datetime NOT NULL,
+  `created_by_id` int(11) DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  `updated_by_id` int(11) DEFAULT NULL,
+  `locale` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `content` text COLLATE utf8_unicode_ci
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `toyotadjakarta_pages_welcome_page_pages_translations`
+--
+
+INSERT INTO `toyotadjakarta_pages_welcome_page_pages_translations` (`id`, `entry_id`, `created_at`, `created_by_id`, `updated_at`, `updated_by_id`, `locale`, `content`) VALUES
+(1, 1, '2017-06-19 10:11:51', NULL, '2017-06-19 10:22:09', 1, 'id', '<p>Bagi anda pencinta mobil Toyota Terbaru, kali ini kami akan menawarkan Promo Toyota Jakarta terbaru yakni Kredit Toyota Sienta dan Toyota Calya dengan Dp murah terbaru. Promo yang akan kami berikan kepada anda pencinta otomotif nusantara yang sedang mencari penawaran kredit murah Toyota sienta dan Toyota Calya dengan dp ringan anda bisa mendapatkannnya disini.</p>\r\n<p>Sebagaimana yang anda tahu, Toyota Sienta dan Toyota Calya merupakan Produk terbaru unggulan besutan Toyota yang di luncurkan pada tahun 2016. Toyota selalu berinovasi memberikan mobil yang berkualitas dengan harga yang terjangkau untuk anda pengemar otomotif nusantara. Promo Toyota Jakarta ini bertujuan untuk mewujudkan mimpi anda untuk memiliki mobil idaman keluarga anda dengan kredit murah dan dp ringan yang kami tawarkan.</p>\r\n<p>Jadi tunggu apalagi dapatkan penawarkan terbaik dari promo toyota Jakarta di tahun 2017 ini, dan pastinyanya kami Marketing dari Tunas Toyota Radin inten Jakarta timur akan memberikan kejutan-kejutan yang akan menguntungkan anda bila anda membeli mobil Toyota Cash dan kredit dari dealer kami.<br></p>'),
+(2, 1, '2017-06-19 10:21:41', NULL, '2017-06-19 10:22:09', 1, 'en', '<p>Bagi anda pencinta mobil Toyota Terbaru, kali ini kami akan menawarkan Promo Toyota Jakarta terbaru yakni Kredit Toyota Sienta dan Toyota Calya dengan Dp murah terbaru. Promo yang akan kami berikan kepada anda pencinta otomotif nusantara yang sedang mencari penawaran kredit murah Toyota sienta dan Toyota Calya dengan dp ringan anda bisa mendapatkannnya disini.</p>\r\n<p>Sebagaimana yang anda tahu, Toyota Sienta dan Toyota Calya merupakan Produk terbaru unggulan besutan Toyota yang di luncurkan pada tahun 2016. Toyota selalu berinovasi memberikan mobil yang berkualitas dengan harga yang terjangkau untuk anda pengemar otomotif nusantara. Promo Toyota Jakarta ini bertujuan untuk mewujudkan mimpi anda untuk memiliki mobil idaman keluarga anda dengan kredit murah dan dp ringan yang kami tawarkan.</p>\r\n<p>Jadi tunggu apalagi dapatkan penawarkan terbaik dari promo toyota Jakarta di tahun 2017 ini, dan pastinyanya kami Marketing dari Tunas Toyota Radin inten Jakarta timur akan memberikan kejutan-kejutan yang akan menguntungkan anda bila anda membeli mobil Toyota Cash dan kredit dari dealer kami.<br></p>');
 
 -- --------------------------------------------------------
 
@@ -1172,6 +1285,204 @@ CREATE TABLE `toyotadjakarta_redirects_redirects` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `toyotadjakarta_sales_banners`
+--
+
+CREATE TABLE `toyotadjakarta_sales_banners` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `sort_order` int(11) DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `created_by_id` int(11) DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  `updated_by_id` int(11) DEFAULT NULL,
+  `slug` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `image_id` int(11) DEFAULT NULL,
+  `publish` tinyint(1) NOT NULL DEFAULT '1',
+  `website` varchar(255) COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `toyotadjakarta_sales_banners_translations`
+--
+
+CREATE TABLE `toyotadjakarta_sales_banners_translations` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `entry_id` int(11) NOT NULL,
+  `created_at` datetime NOT NULL,
+  `created_by_id` int(11) DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  `updated_by_id` int(11) DEFAULT NULL,
+  `locale` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `name` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `summary` text COLLATE utf8_unicode_ci,
+  `description` text COLLATE utf8_unicode_ci
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `toyotadjakarta_sales_models`
+--
+
+CREATE TABLE `toyotadjakarta_sales_models` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `sort_order` int(11) DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `created_by_id` int(11) DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  `updated_by_id` int(11) DEFAULT NULL,
+  `slug` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `image_id` int(11) NOT NULL,
+  `publish` tinyint(1) NOT NULL DEFAULT '1'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `toyotadjakarta_sales_models_translations`
+--
+
+CREATE TABLE `toyotadjakarta_sales_models_translations` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `entry_id` int(11) NOT NULL,
+  `created_at` datetime NOT NULL,
+  `created_by_id` int(11) DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  `updated_by_id` int(11) DEFAULT NULL,
+  `locale` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `name` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `description` text COLLATE utf8_unicode_ci
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `toyotadjakarta_sales_products`
+--
+
+CREATE TABLE `toyotadjakarta_sales_products` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `sort_order` int(11) DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `created_by_id` int(11) DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  `updated_by_id` int(11) DEFAULT NULL,
+  `slug` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `image_id` int(11) DEFAULT NULL,
+  `publish` tinyint(1) NOT NULL DEFAULT '1',
+  `price` double(11,2) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `toyotadjakarta_sales_products_models`
+--
+
+CREATE TABLE `toyotadjakarta_sales_products_models` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `entry_id` int(11) NOT NULL,
+  `related_id` int(11) NOT NULL,
+  `sort_order` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `toyotadjakarta_sales_products_translations`
+--
+
+CREATE TABLE `toyotadjakarta_sales_products_translations` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `entry_id` int(11) NOT NULL,
+  `created_at` datetime NOT NULL,
+  `created_by_id` int(11) DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  `updated_by_id` int(11) DEFAULT NULL,
+  `locale` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `name` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `summary` text COLLATE utf8_unicode_ci,
+  `description` text COLLATE utf8_unicode_ci
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `toyotadjakarta_sales_testimonis`
+--
+
+CREATE TABLE `toyotadjakarta_sales_testimonis` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `sort_order` int(11) DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `created_by_id` int(11) DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  `updated_by_id` int(11) DEFAULT NULL,
+  `slug` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `image_id` int(11) DEFAULT NULL,
+  `publish` tinyint(1) NOT NULL DEFAULT '1'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `toyotadjakarta_sales_testimonis`
+--
+
+INSERT INTO `toyotadjakarta_sales_testimonis` (`id`, `sort_order`, `created_at`, `created_by_id`, `updated_at`, `updated_by_id`, `slug`, `image_id`, `publish`) VALUES
+(1, 1, '2017-06-19 08:52:51', 1, NULL, NULL, 'desi-testis', 15, 1),
+(2, 2, '2017-06-19 08:54:43', 1, NULL, NULL, 'arman-testis', 16, 1),
+(3, 3, '2017-06-19 09:09:40', 1, NULL, NULL, 'suni-testis', 20, 1),
+(4, 4, '2017-06-19 09:10:10', 1, NULL, NULL, 'meni-testis', 18, 1),
+(5, 5, '2017-06-19 09:11:07', 1, NULL, NULL, 'turan-testis', 21, 1),
+(6, 6, '2017-06-19 09:11:32', 1, NULL, NULL, 'mesi-testis', 19, 1),
+(7, 7, '2017-06-19 09:12:20', 1, NULL, NULL, 'tono', 17, 1),
+(8, 8, '2017-06-19 09:14:37', 1, NULL, NULL, 'sawerdi-testis', 22, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `toyotadjakarta_sales_testimonis_translations`
+--
+
+CREATE TABLE `toyotadjakarta_sales_testimonis_translations` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `entry_id` int(11) NOT NULL,
+  `created_at` datetime NOT NULL,
+  `created_by_id` int(11) DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  `updated_by_id` int(11) DEFAULT NULL,
+  `locale` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `name` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `summary` text COLLATE utf8_unicode_ci,
+  `description` text COLLATE utf8_unicode_ci
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `toyotadjakarta_sales_testimonis_translations`
+--
+
+INSERT INTO `toyotadjakarta_sales_testimonis_translations` (`id`, `entry_id`, `created_at`, `created_by_id`, `updated_at`, `updated_by_id`, `locale`, `name`, `summary`, `description`) VALUES
+(1, 1, '2017-06-19 08:52:51', NULL, '2017-06-19 08:52:51', 1, 'en', NULL, NULL, NULL),
+(2, 1, '2017-06-19 08:52:52', NULL, '2017-06-19 08:52:52', 1, 'id', 'Desi Testis', 'Testis Desi', '<p>Testis Desi<br></p>'),
+(3, 2, '2017-06-19 08:54:43', NULL, '2017-06-19 08:54:43', 1, 'en', NULL, NULL, NULL),
+(4, 2, '2017-06-19 08:54:44', NULL, '2017-06-19 08:54:44', 1, 'id', 'Arman Testis', 'Arman Testis', '<p>Arman Testis</p>'),
+(5, 3, '2017-06-19 09:09:40', NULL, '2017-06-19 09:09:40', 1, 'en', NULL, NULL, NULL),
+(6, 3, '2017-06-19 09:09:40', NULL, '2017-06-19 09:09:40', 1, 'id', 'Suni Testis', 'Suni Testis', '<p>Suni Testis</p>'),
+(7, 4, '2017-06-19 09:10:11', NULL, '2017-06-19 09:10:11', 1, 'en', NULL, NULL, NULL),
+(8, 4, '2017-06-19 09:10:11', NULL, '2017-06-19 09:10:11', 1, 'id', 'Meni Testis', 'Meni Testis', '<p>Meni Testis</p>'),
+(9, 5, '2017-06-19 09:11:08', NULL, '2017-06-19 09:11:08', 1, 'en', NULL, NULL, NULL),
+(10, 5, '2017-06-19 09:11:08', NULL, '2017-06-19 09:11:08', 1, 'id', 'Turan Testis', 'Turan Testis', '<p>Turan Testis</p>'),
+(11, 6, '2017-06-19 09:11:32', NULL, '2017-06-19 09:11:32', 1, 'en', NULL, NULL, NULL),
+(12, 6, '2017-06-19 09:11:32', NULL, '2017-06-19 09:11:32', 1, 'id', 'Mesi Testis', 'Mesi Testis', '<p>Mesi Testis</p>'),
+(13, 7, '2017-06-19 09:12:20', NULL, '2017-06-19 09:12:20', 1, 'en', NULL, NULL, NULL),
+(14, 7, '2017-06-19 09:12:20', NULL, '2017-06-19 09:12:20', 1, 'id', 'Tono', 'Tono', 'Tono'),
+(15, 8, '2017-06-19 09:14:37', NULL, '2017-06-19 09:14:37', 1, 'en', NULL, NULL, NULL),
+(16, 8, '2017-06-19 09:14:37', NULL, '2017-06-19 09:14:37', 1, 'id', 'Sawerdi Testis', 'Sawerdy', '<p>Sawerdy</p>');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `toyotadjakarta_sessions`
 --
 
@@ -1256,9 +1567,9 @@ CREATE TABLE `toyotadjakarta_slideshows_banners` (
 --
 
 INSERT INTO `toyotadjakarta_slideshows_banners` (`id`, `sort_order`, `created_at`, `created_by_id`, `updated_at`, `updated_by_id`, `slug`, `image_id`, `publish`) VALUES
-(1, 1, '2017-06-18 07:08:10', 1, NULL, NULL, 'banner-1', 1, 1),
-(2, 2, '2017-06-18 07:08:27', 1, NULL, NULL, 'banner-2', 2, 1),
-(3, 3, '2017-06-18 07:09:42', 1, NULL, NULL, 'banner-3', 3, 1);
+(4, 1, '2017-06-19 08:25:35', 1, NULL, NULL, 'slide-1', 9, 1),
+(5, 2, '2017-06-19 08:27:08', 1, NULL, NULL, 'slide-2', 10, 1),
+(6, 3, '2017-06-19 08:27:34', 1, NULL, NULL, 'slide-3', 11, 1);
 
 -- --------------------------------------------------------
 
@@ -1284,12 +1595,18 @@ CREATE TABLE `toyotadjakarta_slideshows_banners_translations` (
 --
 
 INSERT INTO `toyotadjakarta_slideshows_banners_translations` (`id`, `entry_id`, `created_at`, `created_by_id`, `updated_at`, `updated_by_id`, `locale`, `title`, `summary`, `description`) VALUES
-(1, 1, '2017-06-18 07:08:10', NULL, '2017-06-18 07:08:10', 1, 'en', NULL, NULL, NULL),
-(2, 1, '2017-06-18 07:08:10', NULL, '2017-06-18 07:08:10', 1, 'id', 'Banner 1', 'Banner 1', '<p>Banner 1</p>'),
-(3, 2, '2017-06-18 07:08:27', NULL, '2017-06-18 07:08:27', 1, 'en', NULL, NULL, NULL),
-(4, 2, '2017-06-18 07:08:27', NULL, '2017-06-18 07:08:27', 1, 'id', 'Banner 2', 'Banner 2', '<p>Banner 2</p>'),
-(5, 3, '2017-06-18 07:09:42', NULL, '2017-06-18 07:09:42', 1, 'en', NULL, NULL, NULL),
-(6, 3, '2017-06-18 07:09:42', NULL, '2017-06-18 07:09:42', 1, 'id', 'Banner 3', 'Banner 3', '<p>Banner 3</p>');
+(7, 4, '2017-06-19 08:25:35', NULL, '2017-06-19 08:25:35', 1, 'en', NULL, NULL, NULL),
+(8, 4, '2017-06-19 08:25:35', NULL, '2017-06-19 08:25:35', 1, 'id', 'Slide 1', 'Slide 1', '<p>Slide 1<br></p>'),
+(9, 5, '2017-06-19 08:27:08', NULL, '2017-06-19 08:27:08', 1, 'en', NULL, NULL, NULL),
+(10, 5, '2017-06-19 08:27:08', NULL, '2017-06-19 08:27:08', 1, 'id', 'Slide 2', 'Slide 2', '<p>Slide 2<br></p>'),
+(11, 6, '2017-06-19 08:27:35', NULL, '2017-06-19 08:27:35', 1, 'en', NULL, NULL, NULL),
+(12, 6, '2017-06-19 08:27:35', NULL, '2017-06-19 08:27:35', 1, 'id', 'Slide 3', 'Slide 3', '<p>Slide 3<br></p>'),
+(13, 1, '2017-06-19 08:30:19', NULL, '2017-06-19 08:30:19', 1, 'id', 'Kredit Toyota termurah', 'Kami akan memberikan anda Kredit mobil Toyota termurah dari Promo Toyota Jakarta di tahun 2017 ini, dan kami akan memberikan anda banyak penawaran-penawaran menarik dengan diskon yang besar.', '<p>Kami akan memberikan anda Kredit mobil Toyota termurah dari Promo Toyota Jakarta di tahun 2017 ini, dan kami akan memberikan anda banyak penawaran-penawaran menarik dengan diskon yang besar.</p>'),
+(14, 1, '2017-06-19 08:30:20', NULL, '2017-06-19 08:30:20', 1, 'en', NULL, NULL, NULL),
+(15, 3, '2017-06-19 08:33:49', NULL, '2017-06-19 08:33:49', 1, 'id', 'Proses Kredit yang Cepat', 'Proses kredit dari promo toyota jakarta kali ini sangat cepat dan tidak bertele-tele, untuk data akan kami bantu agar anda dapat lebih cepat mendapatkan mobil Toyota impian keluarga anda, segera hubungi kami.', '<p>Proses kredit dari promo toyota jakarta kali ini sangat cepat dan tidak bertele-tele, untuk data akan kami bantu agar anda dapat lebih cepat mendapatkan mobil Toyota impian keluarga anda, segera hubungi kami.</p>'),
+(16, 3, '2017-06-19 08:33:49', NULL, '2017-06-19 08:33:49', 1, 'en', NULL, NULL, NULL),
+(17, 2, '2017-06-19 08:34:47', NULL, '2017-06-19 08:34:47', 1, 'id', 'Pelayanan yang Bersahabat', 'Pelayanan yang bersahabat dan ramah dalam melayani anda untuk dapat mendapatkan mobil toyota impian anda. Konsultasikan rencana pembelian mobil Toyota anda kepada marketing kami yang berpengalaman.', '<p>Pelayanan yang bersahabat dan ramah dalam melayani anda untuk dapat mendapatkan mobil toyota impian anda. Konsultasikan rencana pembelian mobil Toyota anda kepada marketing kami yang berpengalaman.</p>'),
+(18, 2, '2017-06-19 08:34:48', NULL, '2017-06-19 08:34:48', 1, 'en', NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -1314,9 +1631,9 @@ CREATE TABLE `toyotadjakarta_slideshows_intros` (
 --
 
 INSERT INTO `toyotadjakarta_slideshows_intros` (`id`, `sort_order`, `created_at`, `created_by_id`, `updated_at`, `updated_by_id`, `slug`, `image_id`, `publish`) VALUES
-(1, 1, '2017-06-18 06:37:23', 1, NULL, NULL, 'kredit-toyota-termurah', 4, 1),
-(2, 2, '2017-06-18 07:05:44', 1, NULL, NULL, 'proses-kredit-yang-cepat', 5, 1),
-(3, 3, '2017-06-18 07:06:18', 1, NULL, NULL, 'pelayanan-yang-bersahabat', 6, 1);
+(1, 1, '2017-06-18 06:37:23', 1, '2017-06-19 08:30:19', 1, 'kredit-toyota-termurah', 12, 1),
+(2, 2, '2017-06-18 07:05:44', 1, '2017-06-19 08:34:47', 1, 'pelayanan-yang-bersahabat', 14, 1),
+(3, 3, '2017-06-18 07:06:18', 1, '2017-06-19 08:33:49', 1, 'pelayanan-yang-bersahabat2', 13, 1);
 
 -- --------------------------------------------------------
 
@@ -1558,7 +1875,35 @@ INSERT INTO `toyotadjakarta_streams_assignments` (`id`, `sort_order`, `stream_id
 (155, 139, 30, 131, 'a:0:{}', 0, 1, 0),
 (156, 140, 30, 130, 'a:0:{}', 0, 1, 0),
 (157, 141, 30, 132, 'a:0:{}', 0, 1, 1),
-(158, 142, 30, 133, 'a:0:{}', 0, 1, 1);
+(158, 142, 30, 133, 'a:0:{}', 0, 1, 1),
+(208, 143, 39, 160, 'a:0:{}', 0, 1, 1),
+(209, 144, 39, 161, 'a:0:{}', 1, 1, 0),
+(210, 145, 39, 166, 'a:0:{}', 0, 1, 0),
+(211, 146, 39, 165, 'a:0:{}', 0, 1, 0),
+(212, 147, 39, 169, 'a:0:{}', 0, 0, 1),
+(213, 148, 40, 160, 'a:0:{}', 0, 1, 1),
+(214, 149, 40, 161, 'a:0:{}', 1, 1, 0),
+(215, 150, 40, 164, 'a:0:{}', 0, 0, 0),
+(216, 151, 40, 166, 'a:0:{}', 0, 0, 0),
+(217, 152, 40, 165, 'a:0:{}', 0, 1, 0),
+(218, 153, 40, 167, 'a:0:{}', 0, 0, 1),
+(219, 154, 40, 169, 'a:0:{}', 0, 0, 1),
+(220, 155, 40, 170, 'a:0:{}', 0, 0, 0),
+(221, 156, 41, 160, 'a:0:{}', 0, 1, 1),
+(222, 157, 41, 161, 'a:0:{}', 1, 1, 0),
+(223, 158, 41, 166, 'a:0:{}', 0, 0, 0),
+(224, 159, 41, 165, 'a:0:{}', 0, 1, 0),
+(225, 160, 41, 167, 'a:0:{}', 0, 0, 1),
+(226, 161, 41, 169, 'a:0:{}', 0, 0, 1),
+(227, 162, 42, 160, 'a:0:{}', 0, 1, 1),
+(228, 163, 42, 161, 'a:0:{}', 1, 1, 0),
+(229, 164, 42, 166, 'a:0:{}', 0, 0, 0),
+(230, 165, 42, 165, 'a:0:{}', 0, 1, 0),
+(231, 166, 42, 167, 'a:0:{}', 0, 0, 1),
+(232, 167, 42, 163, 'a:0:{}', 0, 1, 0),
+(233, 168, 42, 169, 'a:0:{}', 0, 0, 1),
+(234, 169, 44, 41, 'a:1:{i:0;s:6:\"a:0:{}\";}', 0, 1, 1),
+(235, 170, 44, 173, 'a:1:{i:0;s:6:\"a:0:{}\";}', 0, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -1722,7 +2067,37 @@ INSERT INTO `toyotadjakarta_streams_assignments_translations` (`id`, `assignment
 (155, 155, 'en', 'toyotadjakarta.module.slideshows::field.image.label.intros', 'toyotadjakarta.module.slideshows::field.image.warning.intros', 'toyotadjakarta.module.slideshows::field.image.placeholder.intros', 'toyotadjakarta.module.slideshows::field.image.instructions.intros'),
 (156, 156, 'en', 'toyotadjakarta.module.slideshows::field.publish.label.intros', 'toyotadjakarta.module.slideshows::field.publish.warning.intros', 'toyotadjakarta.module.slideshows::field.publish.placeholder.intros', 'toyotadjakarta.module.slideshows::field.publish.instructions.intros'),
 (157, 157, 'en', 'toyotadjakarta.module.slideshows::field.summary.label.intros', 'toyotadjakarta.module.slideshows::field.summary.warning.intros', 'toyotadjakarta.module.slideshows::field.summary.placeholder.intros', 'toyotadjakarta.module.slideshows::field.summary.instructions.intros'),
-(158, 158, 'en', 'toyotadjakarta.module.slideshows::field.description.label.intros', 'toyotadjakarta.module.slideshows::field.description.warning.intros', 'toyotadjakarta.module.slideshows::field.description.placeholder.intros', 'toyotadjakarta.module.slideshows::field.description.instructions.intros');
+(158, 158, 'en', 'toyotadjakarta.module.slideshows::field.description.label.intros', 'toyotadjakarta.module.slideshows::field.description.warning.intros', 'toyotadjakarta.module.slideshows::field.description.placeholder.intros', 'toyotadjakarta.module.slideshows::field.description.instructions.intros'),
+(208, 208, 'en', 'toyotadjakarta.module.sales::field.name.label.models', 'toyotadjakarta.module.sales::field.name.warning.models', 'toyotadjakarta.module.sales::field.name.placeholder.models', 'toyotadjakarta.module.sales::field.name.instructions.models'),
+(209, 209, 'en', 'toyotadjakarta.module.sales::field.slug.label.models', 'toyotadjakarta.module.sales::field.slug.warning.models', 'toyotadjakarta.module.sales::field.slug.placeholder.models', 'toyotadjakarta.module.sales::field.slug.instructions.models'),
+(210, 210, 'en', 'toyotadjakarta.module.sales::field.image.label.models', 'toyotadjakarta.module.sales::field.image.warning.models', 'toyotadjakarta.module.sales::field.image.placeholder.models', 'toyotadjakarta.module.sales::field.image.instructions.models'),
+(211, 211, 'en', 'toyotadjakarta.module.sales::field.publish.label.models', 'toyotadjakarta.module.sales::field.publish.warning.models', 'toyotadjakarta.module.sales::field.publish.placeholder.models', 'toyotadjakarta.module.sales::field.publish.instructions.models'),
+(212, 212, 'en', 'toyotadjakarta.module.sales::field.description.label.models', 'toyotadjakarta.module.sales::field.description.warning.models', 'toyotadjakarta.module.sales::field.description.placeholder.models', 'toyotadjakarta.module.sales::field.description.instructions.models'),
+(213, 213, 'en', 'toyotadjakarta.module.sales::field.name.label.products', 'toyotadjakarta.module.sales::field.name.warning.products', 'toyotadjakarta.module.sales::field.name.placeholder.products', 'toyotadjakarta.module.sales::field.name.instructions.products'),
+(214, 214, 'en', 'toyotadjakarta.module.sales::field.slug.label.products', 'toyotadjakarta.module.sales::field.slug.warning.products', 'toyotadjakarta.module.sales::field.slug.placeholder.products', 'toyotadjakarta.module.sales::field.slug.instructions.products'),
+(215, 215, 'en', 'toyotadjakarta.module.sales::field.models.label.products', 'toyotadjakarta.module.sales::field.models.warning.products', 'toyotadjakarta.module.sales::field.models.placeholder.products', 'toyotadjakarta.module.sales::field.models.instructions.products'),
+(216, 216, 'en', 'toyotadjakarta.module.sales::field.image.label.products', 'toyotadjakarta.module.sales::field.image.warning.products', 'toyotadjakarta.module.sales::field.image.placeholder.products', 'toyotadjakarta.module.sales::field.image.instructions.products'),
+(217, 217, 'en', 'toyotadjakarta.module.sales::field.publish.label.products', 'toyotadjakarta.module.sales::field.publish.warning.products', 'toyotadjakarta.module.sales::field.publish.placeholder.products', 'toyotadjakarta.module.sales::field.publish.instructions.products'),
+(218, 218, 'en', 'toyotadjakarta.module.sales::field.summary.label.products', 'toyotadjakarta.module.sales::field.summary.warning.products', 'toyotadjakarta.module.sales::field.summary.placeholder.products', 'toyotadjakarta.module.sales::field.summary.instructions.products'),
+(219, 219, 'en', 'toyotadjakarta.module.sales::field.description.label.products', 'toyotadjakarta.module.sales::field.description.warning.products', 'toyotadjakarta.module.sales::field.description.placeholder.products', 'toyotadjakarta.module.sales::field.description.instructions.products'),
+(220, 220, 'en', 'toyotadjakarta.module.sales::field.price.label.products', 'toyotadjakarta.module.sales::field.price.warning.products', 'toyotadjakarta.module.sales::field.price.placeholder.products', 'toyotadjakarta.module.sales::field.price.instructions.products'),
+(221, 221, 'en', 'toyotadjakarta.module.sales::field.name.label.testimonis', 'toyotadjakarta.module.sales::field.name.warning.testimonis', 'toyotadjakarta.module.sales::field.name.placeholder.testimonis', 'toyotadjakarta.module.sales::field.name.instructions.testimonis'),
+(222, 222, 'en', 'toyotadjakarta.module.sales::field.slug.label.testimonis', 'toyotadjakarta.module.sales::field.slug.warning.testimonis', 'toyotadjakarta.module.sales::field.slug.placeholder.testimonis', 'toyotadjakarta.module.sales::field.slug.instructions.testimonis'),
+(223, 223, 'en', 'toyotadjakarta.module.sales::field.image.label.testimonis', 'toyotadjakarta.module.sales::field.image.warning.testimonis', 'toyotadjakarta.module.sales::field.image.placeholder.testimonis', 'toyotadjakarta.module.sales::field.image.instructions.testimonis'),
+(224, 224, 'en', 'toyotadjakarta.module.sales::field.publish.label.testimonis', 'toyotadjakarta.module.sales::field.publish.warning.testimonis', 'toyotadjakarta.module.sales::field.publish.placeholder.testimonis', 'toyotadjakarta.module.sales::field.publish.instructions.testimonis'),
+(225, 225, 'en', 'toyotadjakarta.module.sales::field.summary.label.testimonis', 'toyotadjakarta.module.sales::field.summary.warning.testimonis', 'toyotadjakarta.module.sales::field.summary.placeholder.testimonis', 'toyotadjakarta.module.sales::field.summary.instructions.testimonis'),
+(226, 226, 'en', 'toyotadjakarta.module.sales::field.description.label.testimonis', 'toyotadjakarta.module.sales::field.description.warning.testimonis', 'toyotadjakarta.module.sales::field.description.placeholder.testimonis', 'toyotadjakarta.module.sales::field.description.instructions.testimonis'),
+(227, 227, 'en', 'toyotadjakarta.module.sales::field.name.label.banners', 'toyotadjakarta.module.sales::field.name.warning.banners', 'toyotadjakarta.module.sales::field.name.placeholder.banners', 'toyotadjakarta.module.sales::field.name.instructions.banners'),
+(228, 228, 'en', 'toyotadjakarta.module.sales::field.slug.label.banners', 'toyotadjakarta.module.sales::field.slug.warning.banners', 'toyotadjakarta.module.sales::field.slug.placeholder.banners', 'toyotadjakarta.module.sales::field.slug.instructions.banners'),
+(229, 229, 'en', 'toyotadjakarta.module.sales::field.image.label.banners', 'toyotadjakarta.module.sales::field.image.warning.banners', 'toyotadjakarta.module.sales::field.image.placeholder.banners', 'toyotadjakarta.module.sales::field.image.instructions.banners'),
+(230, 230, 'en', 'toyotadjakarta.module.sales::field.publish.label.banners', 'toyotadjakarta.module.sales::field.publish.warning.banners', 'toyotadjakarta.module.sales::field.publish.placeholder.banners', 'toyotadjakarta.module.sales::field.publish.instructions.banners'),
+(231, 231, 'en', 'toyotadjakarta.module.sales::field.summary.label.banners', 'toyotadjakarta.module.sales::field.summary.warning.banners', 'toyotadjakarta.module.sales::field.summary.placeholder.banners', 'toyotadjakarta.module.sales::field.summary.instructions.banners'),
+(232, 232, 'en', 'toyotadjakarta.module.sales::field.website.label.banners', 'toyotadjakarta.module.sales::field.website.warning.banners', 'toyotadjakarta.module.sales::field.website.placeholder.banners', 'toyotadjakarta.module.sales::field.website.instructions.banners'),
+(233, 233, 'en', 'toyotadjakarta.module.sales::field.description.label.banners', 'toyotadjakarta.module.sales::field.description.warning.banners', 'toyotadjakarta.module.sales::field.description.placeholder.banners', 'toyotadjakarta.module.sales::field.description.instructions.banners'),
+(234, 234, 'en', NULL, NULL, NULL, NULL),
+(235, 234, 'id', 'Content', 'Please Input Content', 'Content', 'Please Input Content'),
+(236, 235, 'en', NULL, NULL, NULL, NULL),
+(237, 235, 'id', 'Image', 'Please upload a image with greater than 2mb', 'Image', 'Please select a image');
 
 -- --------------------------------------------------------
 
@@ -1864,7 +2239,21 @@ INSERT INTO `toyotadjakarta_streams_fields` (`id`, `namespace`, `slug`, `type`, 
 (130, 'slideshows', 'publish', 'anomaly.field_type.boolean', 'a:2:{s:13:\"default_value\";b:1;s:4:\"mode\";s:5:\"radio\";}', 1),
 (131, 'slideshows', 'image', 'anomaly.field_type.file', 'a:0:{}', 1),
 (132, 'slideshows', 'summary', 'anomaly.field_type.textarea', 'a:0:{}', 1),
-(133, 'slideshows', 'description', 'anomaly.field_type.wysiwyg', 'a:0:{}', 1);
+(133, 'slideshows', 'description', 'anomaly.field_type.wysiwyg', 'a:0:{}', 1),
+(160, 'sales', 'name', 'anomaly.field_type.text', 'a:0:{}', 1),
+(161, 'sales', 'slug', 'anomaly.field_type.slug', 'a:2:{s:4:\"type\";s:1:\"-\";s:7:\"slugify\";s:4:\"name\";}', 1),
+(162, 'sales', 'email', 'anomaly.field_type.email', 'a:0:{}', 1),
+(163, 'sales', 'website', 'anomaly.field_type.text', 'a:0:{}', 1),
+(164, 'sales', 'models', 'anomaly.field_type.multiple', 'a:2:{s:10:\"title_name\";s:4:\"name\";s:7:\"related\";s:43:\"Toyotadjakarta\\SalesModule\\Model\\ModelModel\";}', 1),
+(165, 'sales', 'publish', 'anomaly.field_type.boolean', 'a:2:{s:13:\"default_value\";b:1;s:4:\"mode\";s:5:\"radio\";}', 1),
+(166, 'sales', 'image', 'anomaly.field_type.file', 'a:0:{}', 1),
+(167, 'sales', 'summary', 'anomaly.field_type.textarea', 'a:0:{}', 1),
+(168, 'sales', 'comment', 'anomaly.field_type.textarea', 'a:0:{}', 1),
+(169, 'sales', 'description', 'anomaly.field_type.wysiwyg', 'a:0:{}', 1),
+(170, 'sales', 'price', 'anomaly.field_type.decimal', 'a:0:{}', 1),
+(171, 'sales', 'notify_follow_up', 'anomaly.field_type.boolean', 'a:2:{s:13:\"default_value\";b:1;s:4:\"mode\";s:5:\"radio\";}', 1),
+(172, 'sales', 'notify_post', 'anomaly.field_type.boolean', 'a:2:{s:13:\"default_value\";b:1;s:4:\"mode\";s:5:\"radio\";}', 1),
+(173, 'pages', 'image', 'anomaly.field_type.file', 'a:3:{s:7:\"folders\";a:1:{i:0;s:1:\"1\";}s:3:\"max\";s:4:\"25.0\";s:4:\"mode\";s:7:\"default\";}', 0);
 
 -- --------------------------------------------------------
 
@@ -2007,7 +2396,22 @@ INSERT INTO `toyotadjakarta_streams_fields_translations` (`id`, `field_id`, `loc
 (130, 130, 'en', 'toyotadjakarta.module.slideshows::field.publish.name', 'toyotadjakarta.module.slideshows::field.publish.placeholder', 'toyotadjakarta.module.slideshows::field.publish.warning', 'toyotadjakarta.module.slideshows::field.publish.instructions'),
 (131, 131, 'en', 'toyotadjakarta.module.slideshows::field.image.name', 'toyotadjakarta.module.slideshows::field.image.placeholder', 'toyotadjakarta.module.slideshows::field.image.warning', 'toyotadjakarta.module.slideshows::field.image.instructions'),
 (132, 132, 'en', 'toyotadjakarta.module.slideshows::field.summary.name', 'toyotadjakarta.module.slideshows::field.summary.placeholder', 'toyotadjakarta.module.slideshows::field.summary.warning', 'toyotadjakarta.module.slideshows::field.summary.instructions'),
-(133, 133, 'en', 'toyotadjakarta.module.slideshows::field.description.name', 'toyotadjakarta.module.slideshows::field.description.placeholder', 'toyotadjakarta.module.slideshows::field.description.warning', 'toyotadjakarta.module.slideshows::field.description.instructions');
+(133, 133, 'en', 'toyotadjakarta.module.slideshows::field.description.name', 'toyotadjakarta.module.slideshows::field.description.placeholder', 'toyotadjakarta.module.slideshows::field.description.warning', 'toyotadjakarta.module.slideshows::field.description.instructions'),
+(160, 160, 'en', 'toyotadjakarta.module.sales::field.name.name', 'toyotadjakarta.module.sales::field.name.placeholder', 'toyotadjakarta.module.sales::field.name.warning', 'toyotadjakarta.module.sales::field.name.instructions'),
+(161, 161, 'en', 'toyotadjakarta.module.sales::field.slug.name', 'toyotadjakarta.module.sales::field.slug.placeholder', 'toyotadjakarta.module.sales::field.slug.warning', 'toyotadjakarta.module.sales::field.slug.instructions'),
+(162, 162, 'en', 'toyotadjakarta.module.sales::field.email.name', 'toyotadjakarta.module.sales::field.email.placeholder', 'toyotadjakarta.module.sales::field.email.warning', 'toyotadjakarta.module.sales::field.email.instructions'),
+(163, 163, 'en', 'toyotadjakarta.module.sales::field.website.name', 'toyotadjakarta.module.sales::field.website.placeholder', 'toyotadjakarta.module.sales::field.website.warning', 'toyotadjakarta.module.sales::field.website.instructions'),
+(164, 164, 'en', 'toyotadjakarta.module.sales::field.models.name', 'toyotadjakarta.module.sales::field.models.placeholder', 'toyotadjakarta.module.sales::field.models.warning', 'toyotadjakarta.module.sales::field.models.instructions'),
+(165, 165, 'en', 'toyotadjakarta.module.sales::field.publish.name', 'toyotadjakarta.module.sales::field.publish.placeholder', 'toyotadjakarta.module.sales::field.publish.warning', 'toyotadjakarta.module.sales::field.publish.instructions'),
+(166, 166, 'en', 'toyotadjakarta.module.sales::field.image.name', 'toyotadjakarta.module.sales::field.image.placeholder', 'toyotadjakarta.module.sales::field.image.warning', 'toyotadjakarta.module.sales::field.image.instructions'),
+(167, 167, 'en', 'toyotadjakarta.module.sales::field.summary.name', 'toyotadjakarta.module.sales::field.summary.placeholder', 'toyotadjakarta.module.sales::field.summary.warning', 'toyotadjakarta.module.sales::field.summary.instructions'),
+(168, 168, 'en', 'toyotadjakarta.module.sales::field.comment.name', 'toyotadjakarta.module.sales::field.comment.placeholder', 'toyotadjakarta.module.sales::field.comment.warning', 'toyotadjakarta.module.sales::field.comment.instructions'),
+(169, 169, 'en', 'toyotadjakarta.module.sales::field.description.name', 'toyotadjakarta.module.sales::field.description.placeholder', 'toyotadjakarta.module.sales::field.description.warning', 'toyotadjakarta.module.sales::field.description.instructions'),
+(170, 170, 'en', 'toyotadjakarta.module.sales::field.price.name', 'toyotadjakarta.module.sales::field.price.placeholder', 'toyotadjakarta.module.sales::field.price.warning', 'toyotadjakarta.module.sales::field.price.instructions'),
+(171, 171, 'en', 'toyotadjakarta.module.sales::field.notify_follow_up.name', 'toyotadjakarta.module.sales::field.notify_follow_up.placeholder', 'toyotadjakarta.module.sales::field.notify_follow_up.warning', 'toyotadjakarta.module.sales::field.notify_follow_up.instructions'),
+(172, 172, 'en', 'toyotadjakarta.module.sales::field.notify_post.name', 'toyotadjakarta.module.sales::field.notify_post.placeholder', 'toyotadjakarta.module.sales::field.notify_post.warning', 'toyotadjakarta.module.sales::field.notify_post.instructions'),
+(173, 173, 'en', NULL, NULL, NULL, NULL),
+(174, 173, 'id', 'Image', 'Image', 'Please Upload a Image', 'Please Upload a Image');
 
 -- --------------------------------------------------------
 
@@ -2062,7 +2466,13 @@ INSERT INTO `toyotadjakarta_streams_streams` (`id`, `namespace`, `slug`, `prefix
 (24, 'posts', 'default_posts', 'posts_', 'id', 'id', 0, 1, 0, 0, 1, 1, 'a:0:{}'),
 (28, 'slideshows', 'banners', 'slideshows_', 'title', 'id', 0, 0, 0, 0, 0, 1, 'a:0:{}'),
 (29, 'slideshows', 'welcomes', 'slideshows_', 'title', 'id', 0, 0, 0, 0, 0, 1, 'a:0:{}'),
-(30, 'slideshows', 'intros', 'slideshows_', 'title', 'id', 0, 0, 0, 0, 0, 1, 'a:0:{}');
+(30, 'slideshows', 'intros', 'slideshows_', 'title', 'id', 0, 0, 0, 0, 0, 1, 'a:0:{}'),
+(39, 'sales', 'models', 'sales_', 'name', 'id', 0, 0, 0, 0, 0, 1, 'a:0:{}'),
+(40, 'sales', 'products', 'sales_', 'name', 'id', 0, 0, 0, 0, 0, 1, 'a:0:{}'),
+(41, 'sales', 'testimonis', 'sales_', 'name', 'id', 0, 0, 0, 0, 0, 1, 'a:0:{}'),
+(42, 'sales', 'banners', 'sales_', 'name', 'id', 0, 0, 0, 0, 0, 1, 'a:0:{}'),
+(43, 'files', 'testimoni', 'files_', 'id', 'id', 0, 0, 0, 0, 1, 1, 'a:0:{}'),
+(44, 'pages', 'welcome_page_pages', 'pages_', 'id', 'id', 0, 1, 0, 0, 1, 1, 'a:0:{}');
 
 -- --------------------------------------------------------
 
@@ -2109,7 +2519,13 @@ INSERT INTO `toyotadjakarta_streams_streams_translations` (`id`, `stream_id`, `l
 (24, 24, 'en', 'Default', NULL),
 (28, 28, 'en', 'toyotadjakarta.module.slideshows::stream.banners.name', 'toyotadjakarta.module.slideshows::stream.banners.description'),
 (29, 29, 'en', 'toyotadjakarta.module.slideshows::stream.welcomes.name', 'toyotadjakarta.module.slideshows::stream.welcomes.description'),
-(30, 30, 'en', 'toyotadjakarta.module.slideshows::stream.intros.name', 'toyotadjakarta.module.slideshows::stream.intros.description');
+(30, 30, 'en', 'toyotadjakarta.module.slideshows::stream.intros.name', 'toyotadjakarta.module.slideshows::stream.intros.description'),
+(39, 39, 'en', 'toyotadjakarta.module.sales::stream.models.name', 'toyotadjakarta.module.sales::stream.models.description'),
+(40, 40, 'en', 'toyotadjakarta.module.sales::stream.products.name', 'toyotadjakarta.module.sales::stream.products.description'),
+(41, 41, 'en', 'toyotadjakarta.module.sales::stream.testimonis.name', 'toyotadjakarta.module.sales::stream.testimonis.description'),
+(42, 42, 'en', 'toyotadjakarta.module.sales::stream.banners.name', 'toyotadjakarta.module.sales::stream.banners.description'),
+(43, 43, 'en', 'Testimoni', NULL),
+(44, 44, 'en', 'Welcome Page', 'Welcome Page');
 
 -- --------------------------------------------------------
 
@@ -2251,7 +2667,7 @@ CREATE TABLE `toyotadjakarta_users_users` (
 --
 
 INSERT INTO `toyotadjakarta_users_users` (`id`, `sort_order`, `created_at`, `created_by_id`, `updated_at`, `updated_by_id`, `deleted_at`, `email`, `username`, `password`, `display_name`, `first_name`, `last_name`, `activated`, `enabled`, `permissions`, `last_login_at`, `remember_token`, `activation_code`, `reset_code`, `last_activity_at`, `ip_address`) VALUES
-(1, 1, '2017-06-16 15:22:23', NULL, '2017-06-18 04:23:33', 1, NULL, 'admin@toyota.com', 'admin', '$2y$10$2.jKbA9qFgjF/mdpC7YgHuuBpfuCRp3WtNfUtvdCdCsnsnCe2Qh1K', 'Administrator', NULL, NULL, 1, 1, NULL, '2017-06-18 04:23:32', NULL, NULL, NULL, NULL, NULL),
+(1, 1, '2017-06-16 15:22:23', NULL, '2017-06-19 07:26:24', 1, NULL, 'admin@toyota.com', 'admin', '$2y$10$2.jKbA9qFgjF/mdpC7YgHuuBpfuCRp3WtNfUtvdCdCsnsnCe2Qh1K', 'Administrator', NULL, NULL, 1, 1, NULL, '2017-06-19 07:26:24', NULL, NULL, NULL, NULL, NULL),
 (2, 2, '2017-06-16 15:22:25', NULL, '2017-06-16 15:22:26', NULL, NULL, 'demo@pyrocms.com', 'demo', '$2y$10$pcMnWdSPtYdzqngj/5FV7usxxV83kEimXfpsLM6uA3moANf.73Gj.', 'Demo User', NULL, NULL, 1, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
@@ -2428,6 +2844,19 @@ ALTER TABLE `toyotadjakarta_files_images_translations`
   ADD KEY `files_images_translations_locale_index` (`locale`);
 
 --
+-- Indexes for table `toyotadjakarta_files_testimoni`
+--
+ALTER TABLE `toyotadjakarta_files_testimoni`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `toyotadjakarta_files_testimoni_translations`
+--
+ALTER TABLE `toyotadjakarta_files_testimoni_translations`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `files_testimoni_translations_locale_index` (`locale`);
+
+--
 -- Indexes for table `toyotadjakarta_jobs`
 --
 ALTER TABLE `toyotadjakarta_jobs`
@@ -2522,6 +2951,19 @@ ALTER TABLE `toyotadjakarta_pages_types_translations`
   ADD KEY `pages_types_translations_locale_index` (`locale`);
 
 --
+-- Indexes for table `toyotadjakarta_pages_welcome_page_pages`
+--
+ALTER TABLE `toyotadjakarta_pages_welcome_page_pages`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `toyotadjakarta_pages_welcome_page_pages_translations`
+--
+ALTER TABLE `toyotadjakarta_pages_welcome_page_pages_translations`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `pages_welcome_page_pages_translations_locale_index` (`locale`);
+
+--
 -- Indexes for table `toyotadjakarta_page_link_type_pages`
 --
 ALTER TABLE `toyotadjakarta_page_link_type_pages`
@@ -2602,6 +3044,69 @@ ALTER TABLE `toyotadjakarta_preferences_preferences`
 ALTER TABLE `toyotadjakarta_redirects_redirects`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `0cb4275c3992e35aae2a6b18f5f213c1` (`from`);
+
+--
+-- Indexes for table `toyotadjakarta_sales_banners`
+--
+ALTER TABLE `toyotadjakarta_sales_banners`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `4110dab2f603c24900d892f5c391b2a5` (`slug`);
+
+--
+-- Indexes for table `toyotadjakarta_sales_banners_translations`
+--
+ALTER TABLE `toyotadjakarta_sales_banners_translations`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `sales_banners_translations_locale_index` (`locale`);
+
+--
+-- Indexes for table `toyotadjakarta_sales_models`
+--
+ALTER TABLE `toyotadjakarta_sales_models`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `d2f7401f27e4fa0452c6de23f87dfe8c` (`slug`);
+
+--
+-- Indexes for table `toyotadjakarta_sales_models_translations`
+--
+ALTER TABLE `toyotadjakarta_sales_models_translations`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `sales_models_translations_locale_index` (`locale`);
+
+--
+-- Indexes for table `toyotadjakarta_sales_products`
+--
+ALTER TABLE `toyotadjakarta_sales_products`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `0f4c0a5d421b8ca563b657cef234cbc5` (`slug`);
+
+--
+-- Indexes for table `toyotadjakarta_sales_products_models`
+--
+ALTER TABLE `toyotadjakarta_sales_products_models`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `unique-relations` (`entry_id`,`related_id`);
+
+--
+-- Indexes for table `toyotadjakarta_sales_products_translations`
+--
+ALTER TABLE `toyotadjakarta_sales_products_translations`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `sales_products_translations_locale_index` (`locale`);
+
+--
+-- Indexes for table `toyotadjakarta_sales_testimonis`
+--
+ALTER TABLE `toyotadjakarta_sales_testimonis`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `d7a7b9492464d4dc0e9adced18c9f095` (`slug`);
+
+--
+-- Indexes for table `toyotadjakarta_sales_testimonis_translations`
+--
+ALTER TABLE `toyotadjakarta_sales_testimonis_translations`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `sales_testimonis_translations_locale_index` (`locale`);
 
 --
 -- Indexes for table `toyotadjakarta_sessions`
@@ -2770,7 +3275,7 @@ ALTER TABLE `toyotadjakarta_addons_extensions`
 -- AUTO_INCREMENT for table `toyotadjakarta_addons_modules`
 --
 ALTER TABLE `toyotadjakarta_addons_modules`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 --
 -- AUTO_INCREMENT for table `toyotadjakarta_configuration_configuration`
 --
@@ -2835,17 +3340,17 @@ ALTER TABLE `toyotadjakarta_files_documents_translations`
 -- AUTO_INCREMENT for table `toyotadjakarta_files_files`
 --
 ALTER TABLE `toyotadjakarta_files_files`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 --
 -- AUTO_INCREMENT for table `toyotadjakarta_files_folders`
 --
 ALTER TABLE `toyotadjakarta_files_folders`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `toyotadjakarta_files_folders_translations`
 --
 ALTER TABLE `toyotadjakarta_files_folders_translations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `toyotadjakarta_files_images`
 --
@@ -2857,6 +3362,16 @@ ALTER TABLE `toyotadjakarta_files_images`
 ALTER TABLE `toyotadjakarta_files_images_translations`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 --
+-- AUTO_INCREMENT for table `toyotadjakarta_files_testimoni`
+--
+ALTER TABLE `toyotadjakarta_files_testimoni`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `toyotadjakarta_files_testimoni_translations`
+--
+ALTER TABLE `toyotadjakarta_files_testimoni_translations`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+--
 -- AUTO_INCREMENT for table `toyotadjakarta_jobs`
 --
 ALTER TABLE `toyotadjakarta_jobs`
@@ -2865,7 +3380,7 @@ ALTER TABLE `toyotadjakarta_jobs`
 -- AUTO_INCREMENT for table `toyotadjakarta_migrations`
 --
 ALTER TABLE `toyotadjakarta_migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=60;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=75;
 --
 -- AUTO_INCREMENT for table `toyotadjakarta_navigation_links`
 --
@@ -2900,7 +3415,7 @@ ALTER TABLE `toyotadjakarta_pages_default_pages_translations`
 -- AUTO_INCREMENT for table `toyotadjakarta_pages_pages`
 --
 ALTER TABLE `toyotadjakarta_pages_pages`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `toyotadjakarta_pages_pages_allowed_roles`
 --
@@ -2910,17 +3425,27 @@ ALTER TABLE `toyotadjakarta_pages_pages_allowed_roles`
 -- AUTO_INCREMENT for table `toyotadjakarta_pages_pages_translations`
 --
 ALTER TABLE `toyotadjakarta_pages_pages_translations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `toyotadjakarta_pages_types`
 --
 ALTER TABLE `toyotadjakarta_pages_types`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `toyotadjakarta_pages_types_translations`
 --
 ALTER TABLE `toyotadjakarta_pages_types_translations`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+--
+-- AUTO_INCREMENT for table `toyotadjakarta_pages_welcome_page_pages`
+--
+ALTER TABLE `toyotadjakarta_pages_welcome_page_pages`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+--
+-- AUTO_INCREMENT for table `toyotadjakarta_pages_welcome_page_pages_translations`
+--
+ALTER TABLE `toyotadjakarta_pages_welcome_page_pages_translations`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `toyotadjakarta_page_link_type_pages`
 --
@@ -2982,6 +3507,51 @@ ALTER TABLE `toyotadjakarta_preferences_preferences`
 ALTER TABLE `toyotadjakarta_redirects_redirects`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 --
+-- AUTO_INCREMENT for table `toyotadjakarta_sales_banners`
+--
+ALTER TABLE `toyotadjakarta_sales_banners`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `toyotadjakarta_sales_banners_translations`
+--
+ALTER TABLE `toyotadjakarta_sales_banners_translations`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `toyotadjakarta_sales_models`
+--
+ALTER TABLE `toyotadjakarta_sales_models`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `toyotadjakarta_sales_models_translations`
+--
+ALTER TABLE `toyotadjakarta_sales_models_translations`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `toyotadjakarta_sales_products`
+--
+ALTER TABLE `toyotadjakarta_sales_products`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `toyotadjakarta_sales_products_models`
+--
+ALTER TABLE `toyotadjakarta_sales_products_models`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `toyotadjakarta_sales_products_translations`
+--
+ALTER TABLE `toyotadjakarta_sales_products_translations`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `toyotadjakarta_sales_testimonis`
+--
+ALTER TABLE `toyotadjakarta_sales_testimonis`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+--
+-- AUTO_INCREMENT for table `toyotadjakarta_sales_testimonis_translations`
+--
+ALTER TABLE `toyotadjakarta_sales_testimonis_translations`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+--
 -- AUTO_INCREMENT for table `toyotadjakarta_settings_settings`
 --
 ALTER TABLE `toyotadjakarta_settings_settings`
@@ -2990,12 +3560,12 @@ ALTER TABLE `toyotadjakarta_settings_settings`
 -- AUTO_INCREMENT for table `toyotadjakarta_slideshows_banners`
 --
 ALTER TABLE `toyotadjakarta_slideshows_banners`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT for table `toyotadjakarta_slideshows_banners_translations`
 --
 ALTER TABLE `toyotadjakarta_slideshows_banners_translations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 --
 -- AUTO_INCREMENT for table `toyotadjakarta_slideshows_intros`
 --
@@ -3020,32 +3590,32 @@ ALTER TABLE `toyotadjakarta_slideshows_welcomes_translations`
 -- AUTO_INCREMENT for table `toyotadjakarta_streams_assignments`
 --
 ALTER TABLE `toyotadjakarta_streams_assignments`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=159;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=236;
 --
 -- AUTO_INCREMENT for table `toyotadjakarta_streams_assignments_translations`
 --
 ALTER TABLE `toyotadjakarta_streams_assignments_translations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=159;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=238;
 --
 -- AUTO_INCREMENT for table `toyotadjakarta_streams_fields`
 --
 ALTER TABLE `toyotadjakarta_streams_fields`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=134;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=174;
 --
 -- AUTO_INCREMENT for table `toyotadjakarta_streams_fields_translations`
 --
 ALTER TABLE `toyotadjakarta_streams_fields_translations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=134;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=175;
 --
 -- AUTO_INCREMENT for table `toyotadjakarta_streams_streams`
 --
 ALTER TABLE `toyotadjakarta_streams_streams`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
 --
 -- AUTO_INCREMENT for table `toyotadjakarta_streams_streams_translations`
 --
 ALTER TABLE `toyotadjakarta_streams_streams_translations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
 --
 -- AUTO_INCREMENT for table `toyotadjakarta_url_link_type_urls`
 --
