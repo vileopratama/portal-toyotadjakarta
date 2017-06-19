@@ -29,6 +29,7 @@ class ToyotadjakartaModuleSlideshowsCreateSlideshowsFields extends Migration
         'image' => 'anomaly.field_type.file',
         'summary' => 'anomaly.field_type.textarea',
         'description' => 'anomaly.field_type.wysiwyg',
+	    
     ];
 
 }

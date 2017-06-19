@@ -1,0 +1,9 @@
+{
+    "name": "toyotadjakarta/sales-module",
+    "type": "streams-addon",
+    "autoload": {
+        "psr-4": {
+            "Toyotadjakarta\\SalesModule\\": "src/"
+        }
+    }
+}

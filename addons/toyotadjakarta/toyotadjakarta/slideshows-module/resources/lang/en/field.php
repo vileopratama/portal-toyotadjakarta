@@ -21,6 +21,10 @@ return [
         'name'         => 'Image',
         'instructions' => 'Specify a short descriptive title for this post.',
     ],
+	'summary'            => [
+		'name'         => 'Summary',
+		'instructions' => 'Specify a short descriptive title for this post.',
+	],
     'description'      => [
         'name'         => 'Description',
         'instructions' => [

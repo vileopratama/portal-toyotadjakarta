@@ -1,5 +1,3 @@
-
-
 {{ asset_add("plugins.css","toyotadjakarta.module.slideshows::bower/prettyphoto/css/prettyPhoto.min.css") }}
 {{ asset_add("plugins.js","toyotadjakarta.module.slideshows::bower/prettyphoto/js/jquery.prettyPhoto.min.js") }}
 {{ asset_add("plugins.js","toyotadjakarta.module.slideshows::bower/js_composer/js/waypoints.min.js") }}
@@ -8,39 +6,40 @@
 
 {% set intros = entries('slideshows','intros').where('publish',1).get() %}
 {% for intro in intros %}
-    <div class="wpb_column vc_column_container vc_col-sm-4">
-        <div class="vc_column-inner">
-            <div class="wpb_wrapper">
-                    <h2 style="font-size: 20px;color: #000000;text-align: center" class="vc_custom_heading">{{ intro.title }}</h2>
-                                                    <div class="wpb_single_image wpb_content_element vc_align_center wpb_animate_when_almost_visible wpb_appear">
-                                                        <figure class="wpb_wrapper vc_figure">
-                                                            <a rel="prettyPhoto[rel-797-1532007293]"
-                                                               href="{{ intro.image.make().url() }}"
-                                                               target="_self"
-                                                               class="vc_single_image-wrapper vc_box_border_circle vc_box_border_grey prettyphoto">
-                                                                    <img class="vc_single_image-img"
-                                                                         src="{{ intro.image.make().fit(250,250).url() }}"
-                                                                         width="250"
-                                                                         height="250"
-                                                                         alt="promo toyota jakarta"
-                                                                         title="promo toyota jakarta"/>
-                                                            </a>
-                                                        </figure>
-                                                    </div>
-                                                    <section class="vc_cta3-container">
-                                                        <div class="vc_general vc_cta3 vc_cta3-style-classic vc_cta3-shape-rounded vc_cta3-align-left vc_cta3-color-classic vc_cta3-icon-size-md">
-                                                            <div class="vc_cta3_content-container">
-                                                                <div class="vc_cta3-content">
-                                                                    <header class="vc_cta3-content-header"></header>
-                                                                    <p style="text-align: justify;">{{ intro.summary|raw }}</p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </section>
-                                                </div>
-                                            </div>
-                                        </div>
-
-    
+	<div class="wpb_column vc_column_container vc_col-sm-4">
+		<div class="vc_column-inner">
+			<div class="wpb_wrapper">
+				<h2 style="font-size: 20px;color: #000000;text-align: center"
+				    class="vc_custom_heading">{{ intro.title }}</h2>
+				<div
+					class="wpb_single_image wpb_content_element vc_align_center wpb_animate_when_almost_visible wpb_appear">
+					<figure class="wpb_wrapper vc_figure">
+						<a rel="prettyPhoto[rel-797-1532007293]"
+						   href="{{ intro.image.make().url() }}"
+						   target="_self"
+						   class="vc_single_image-wrapper vc_box_border_circle vc_box_border_grey prettyphoto">
+							<img class="vc_single_image-img"
+							     src="{{ intro.image.make().fit(250,250).url() }}"
+							     width="250"
+							     height="250"
+							     alt="promo toyota jakarta"
+							     title="promo toyota jakarta"/>
+						</a>
+					</figure>
+				</div>
+				<section class="vc_cta3-container">
+					<div
+						class="vc_general vc_cta3 vc_cta3-style-classic vc_cta3-shape-rounded vc_cta3-align-left vc_cta3-color-classic vc_cta3-icon-size-md">
+						<div class="vc_cta3_content-container">
+							<div class="vc_cta3-content">
+								<header class="vc_cta3-content-header"></header>
+								<p style="text-align: justify;">{{ intro.summary|raw }}</p>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>
+	</div>
 {% endfor %}
        

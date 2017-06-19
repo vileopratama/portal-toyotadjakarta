@@ -1,0 +1,19 @@
+{{ asset_add("plugins.css","toyotadjakarta.module.sales::bower/vendor/slick-carousel/slick.css") }}
+{{ asset_add("plugins.css","toyotadjakarta.module.sales::bower/vendor/slick-carousel/slick-theme.css") }}
+{{ asset_add("plugins.css","toyotadjakarta.module.sales::bower/vendor/slick-carousel/wen-logo-slider-public.css") }}
+{{ asset_add("plugins.js","toyotadjakarta.module.sales::bower/vendor/slick-carousel/slick.min.js") }}
+{{ asset_add("plugins.js","toyotadjakarta.module.sales::bower/plugins/testimoni_slick/js/testimoni_slick_main.js") }}
+
+
+{% set testimonis = entries('sales','testimonis').where('publish',1).get() %}
+<div id="202-593bf2c22a5ab">
+	{% for testi in testimonis %}
+		<div class="panel">
+			<img src="{{ testi.image.make().fit(150,150).url() }}" alt="" title=""/>
+		</div>
+	{% endfor %}
+</div>
+
+
+
+       
