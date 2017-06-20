@@ -1,4 +1,4 @@
-/*
+﻿/*
 Theme Name: Vantage
 Author: SiteOrigin
 Author URI: https://siteorigin.com/
@@ -79,6 +79,7 @@ td {
   padding: 0;
   vertical-align: baseline;
 }
+.text-center{text-align:center}
 html {
   font-size: 62.5%;
   /* Corrects text resizing oddly in IE6/7 when body font-size is set using em units http://clagnut.com/blog/348/#c790 */
