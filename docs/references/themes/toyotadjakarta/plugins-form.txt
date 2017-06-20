@@ -1,0 +1,1 @@
+{{ form('contact').to('example@domain.com')|raw }}
