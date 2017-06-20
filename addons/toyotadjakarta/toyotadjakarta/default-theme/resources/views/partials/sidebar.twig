@@ -1,0 +1,45 @@
+<aside id="search-2" class="widget widget_search">
+	<form method="get" class="searchform" action="http://localhost/" role="search">
+		<input type="text" class="field" name="s" value="" placeholder="Search"/>
+	</form>
+</aside>
+{% set banners = entries('sales','banners').where('publish',1).get() %}
+{% for banner in banners %}
+<aside id="text-5" class="widget widget_text">
+	<div class="textwidget">
+		<center>
+			<a href="{{ banner.website }}" target="_blank">
+				<img alt="{{ banner.name }}" height="300"
+				     src="{{ banner.image.make().url() }}"
+				     width="350"/>
+			</a>
+		</center>
+	</div>
+</aside>
+{% endfor %}
+
+<aside id="recent-posts-widget-with-thumbnails-3" class="widget recent-posts-widget-with-thumbnails">
+	<div id="rpwwt-recent-posts-widget-with-thumbnails-3" class="rpwwt-widget">
+		<h3 class="widget-title">Toyota News</h3>
+		<ul>
+			{% set posts = entries('posts').where('enabled',1).where('category_id',1).limit(10).get() %}
+			{% for post in posts %}
+			<li>
+				<a href="{{ post.route('view') }}">
+					<img width="85" height="85"
+					     src="{{ post.image.make().url() }}"
+					     class="attachment-85x85 size-85x85" alt="paket dp murah toyota"
+					     data-permalink="{{ post.route('view') }}"
+					     data-orig-file="{{ post.image.make().url() }}"
+					     data-orig-size="600,356" data-comments-opened="1"
+					     data-image-title="paket dp murah toyota"
+					     data-image-description=""
+					     data-medium-file="{{ post.image.make().url() }}"
+					     data-large-file="{{ post.image.make().url() }}"/>
+					<span class="rpwwt-post-title">{{ post.title|raw }}</span>
+				</a>
+			</li>
+			{% endfor %}
+		</ul>
+	</div>
+</aside>

@@ -7,6 +7,7 @@ class SalesModuleServiceProvider extends AddonServiceProvider
 
     protected $plugins = [
     	\Toyotadjakarta\SalesModule\TestimoniSlickPlugin::class,
+	    \Toyotadjakarta\SalesModule\ListProductPlugin::class,
     ];
 
     protected $commands = [];

@@ -9,59 +9,28 @@
         </aside>
         <aside id="recent-posts-widget-with-thumbnails-5" class="widget recent-posts-widget-with-thumbnails">
             <div id="rpwwt-recent-posts-widget-with-thumbnails-5" class="rpwwt-widget">
+	            {% set posts = entries('posts').where('enabled',1).where('category_id',1).limit(3).get() %}
                 <h3 class="widget-title">LATEST NEWS</h3>
                 <ul>
-                    <li><a href="https://www.toyotadjakarta.com/2017/01/paket-dp-murah-toyota.html" target="_blank">
+	                {% for post in posts %}
+                    <li>
+                        <a href="{{ post.route('view') }}">
                             <img width="50" height="50"
-                                 src="uploads/abu-600-x-356-150x150.jpg"
-                                 class="attachment-50x50 size-50x50" alt="paket dp murah toyota" data-attachment-id="979"
-                                 data-permalink="/2017/01/toyota-venturer.html/abu-600-x-356#main"
-                                 data-orig-file="uploads/abu-600-x-356.jpg"
+                                 src="{{ post.image.make().url() }}"
+                                 class="attachment-50x50 size-50x50"
+                                 alt="{{ post.title }}"
+                                 data-permalink="{{ post.route('view') }}"
+                                 data-orig-file="{{ post.image.make().url() }}"
                                  data-orig-size="600,356"
                                  data-comments-opened="1"
-                                 data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}"
-                                 data-image-title="paket dp murah toyota" data-image-description=""
-                                 data-medium-file="uploads/abu-600-x-356-300x178.jpg"
-                                 data-large-file="uploads/abu-600-x-356.jpg"/>
-                            <span class="rpwwt-post-title">Paket Dp Murah Toyota &#8211; Promo Toyota Jakarta 2017 &#8211; TDP &#038; kredit angsuran ringan</span>
+                                 data-image-title="{{ post.title }}"
+                                 data-image-description="{{ post.summary }}"
+                                 data-medium-file="{{ post.image.make().url() }}"
+                                 data-large-file="{{ post.image.make().url() }}"/>
+                            <span class="rpwwt-post-title">{{ post.title|raw }}</span>
                         </a>
                     </li>
-                    <li>
-                        <a href="/2017/01/toyota-venturer.html" target="_blank">
-                            <img width="50" height="50"
-                                 src="uploads/fit-688-x-408-600-x-356-150x150.jpg"
-                                 class="attachment-50x50 size-50x50" alt="toyota venturer" data-attachment-id="968"
-                                 data-permalink="/2017/01/toyota-venturer.html/fit-688-x-408-600-x-356#main"
-                                 data-orig-file="uploads/fit-688-x-408-600-x-356.jpg"
-                                 data-orig-size="600,356"
-                                 data-comments-opened="1"
-                                 data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}"
-                                 data-image-title="toyota venturer" data-image-description=""
-                                 data-medium-file="uploads/fit-688-x-408-600-x-356-300x178.jpg"
-                                 data-large-file="uploads/fit-688-x-408-600-x-356.jpg"/>
-                            <span class="rpwwt-post-title">Toyota Venturer 2017 terbaru &#8211; Spesifikasi &#038; Harga Toyota Venturer Jakarta</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/2017/01/harga-toyota-calya.html" target="_blank">
-                            <img width="50" height="50"
-                                 src="uploads/orange-metalic-600-x-375-60x60.jpg"
-                                 class="attachment-50x50 size-50x50" alt="harga toyota calya"
-                                 srcset="uploads/orange-metalic-600-x-375-60x60.jpg 60w, uploads/orange-metalic-600-x-375-150x150.jpg 150w"
-                                 sizes="(max-width: 50px) 100vw, 50px" data-attachment-id="805"
-                                 data-permalink="/2017/01/harga-toyota-calya.html/orange-metalic-600-x-375#main"
-                                 data-orig-file="uploads/orange-metalic-600-x-375.jpg"
-                                 data-orig-size="600,375"
-                                 data-comments-opened="1"
-                                 data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}"
-                                 data-image-title="harga toyota calya"
-                                 data-image-description=""
-                                 data-medium-file="uploads/orange-metalic-600-x-375-300x188.jpg"
-                                 data-large-file="uploads/orange-metalic-600-x-375.jpg"/>
-                            <span class="rpwwt-post-title">Harga Toyota Calya 2017 &#8211; Kredit Calya Tdp Rendah &#8211; Toyota Jakarta</span>
-                        </a>
-                    </li>
-
+	                {% endfor %}
                 </ul>
             </div>
         </aside>

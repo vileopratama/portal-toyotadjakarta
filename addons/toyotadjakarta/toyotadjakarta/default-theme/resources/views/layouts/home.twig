@@ -69,6 +69,44 @@
                                         </div>
                                     </div>
                                 </div>
+	                            
+	                            {% set posts = entries('posts').where('enabled',1).where('category_id',2).get() %}
+	                            {% for post in posts %}
+                                <div class="vc_row wpb_row vc_row-fluid">
+                                    <div class="wpb_column vc_column_container vc_col-sm-8">
+                                        <div class="vc_column-inner">
+                                            <div class="wpb_wrapper">
+                                                <div class="wpb_text_column wpb_content_element">
+                                                    <div class="wpb_wrapper">
+	                                                    {{ post.content|raw }}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+        
+                                    <div class="wpb_column vc_column_container vc_col-sm-4">
+                                        <div class="vc_column-inner ">
+                                            <div class="wpb_wrapper">
+                                                <figure class="wpb_wrapper vc_figure">
+                                                    <a rel="prettyPhoto[rel-797-1532007293]"
+                                                       href="{{ post.image.make().url() }}"
+                                                       target="_self"
+                                                       class="vc_single_image-wrapper vc_box_border_grey prettyphoto">
+                                                        <img
+                                                            class="vc_single_image-img "
+                                                            src="{{ post.image.make().url() }}"
+                                                            width="550"
+                                                            height="158"
+                                                            alt="{{ post.title }}"
+                                                            title="{{ post.title }}"/>
+                                                    </a>
+                                                </figure>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+	                            {% endfor %}
     
                                 <div class="vc_row wpb_row vc_row-fluid">
                                     <div class="wpb_column vc_column_container vc_col-sm-12">

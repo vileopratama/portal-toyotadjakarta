@@ -111,17 +111,17 @@ class PagesWelcomePagePagesEntryModel extends EntryModel
 'namespace' => 'pages',
 'slug' => 'image',
 'type' => 'anomaly.field_type.file',
-'config' => 'a:3:{s:7:"folders";a:1:{i:0;s:1:"1";}s:3:"max";s:4:"25.0";s:4:"mode";s:7:"default";}',
+'config' => 'a:3:{s:7:"folders";a:2:{i:0;s:1:"1";i:1;s:1:"5";}s:3:"max";s:3:"2.0";s:4:"mode";s:7:"default";}',
 'locked' => '0',
 'translations' => [
 [
 'id' => 173,
 'field_id' => 173,
 'locale' => 'en',
-'name' => '',
-'placeholder' => '',
-'warning' => '',
-'instructions' => '',
+'name' => 'Image',
+'placeholder' => 'Image',
+'warning' => 'Please Upload a Image',
+'instructions' => 'Please Upload a Image',
 ],
 [
 'id' => 174,

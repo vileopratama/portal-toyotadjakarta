@@ -1,0 +1,21 @@
+<div id="yoast-breadcrumbs">
+	<div class="full-container">
+        <span xmlns:v="http://rdf.data-vocabulary.org/#">
+            <span typeof="v:Breadcrumb">
+                <a href="/" rel="v:url" property="v:title">Home</a> »
+                <span rel="v:child" typeof="v:Breadcrumb">
+                    {% if template.breadcrumbs.count() %}
+                        {% for breadcrumb, href in template.breadcrumbs %}
+	                        {% if loop.last ? 'active' %}
+                                <strong class="breadcrumb_last">{{ trans(breadcrumb) }}</strong>
+                            {% else %}
+                                <a href="{{ href }}"
+                                   property="v:title"> {{ trans(breadcrumb) }}</a> »
+	                        {% endif %}
+                        {% endfor %}
+                    {% endif %}
+                </span>
+            </span>
+        </span>
+	</div>
+</div>

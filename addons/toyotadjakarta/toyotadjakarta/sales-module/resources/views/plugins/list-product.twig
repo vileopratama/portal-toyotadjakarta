@@ -1,0 +1,47 @@
+{{ asset_add("plugins.css","toyotadjakarta.module.sales::bower/vendor/tablepress/css/default.min.css") }}
+
+
+
+
+<table id="tablepress-23" class="tablepress tablepress-id-23">
+	<tbody class="row-hover">
+	{% set models = entries('sales','models').where('publish',1).get() %}
+	{% for model in models %}
+		<tr class="even">
+			<td class="column-1" style="width: 60%">
+				<img src="{{ model.image.make().url() }}"
+				     alt="{{ model.name }}" width="140" height="87"
+				     class="alignnone size-full wp-image-386"/>
+			</td>
+			<td class="column-2" style="width:30%;font-size:16pt">{{ model.name }}</td>
+		</tr>
+		<tr class="odd">
+			<td class="column-1">Type</td>
+			<td class="column-2">Harga</td>
+		</tr>
+		
+		{% set products = entries('sales','products')
+		.join('sales_products_models','sales_products_models.entry_id','sales_products.id')
+		.where('sales_products.publish',1)
+		.where('sales_products_models.related_id',model.id)
+		.get() %}
+		{% for product in products %}
+			<tr class="even">
+				<td class="column-1">{{ product.name }}</td>
+				<td class="column-2">{{ product.price.format("%.2f") }}</td>
+			</tr>
+			
+		{% endfor %}
+		
+		<tr class="odd">
+			<td class="column-1"></td>
+			<td class="column-2"></td>
+		</tr>
+		
+	{% endfor %}
+	</tbody>
+</table>
+
+
+
+       

@@ -1,0 +1,78 @@
+{% htmlcompress %}
+<!doctype html>
+<!--[if lt IE 7]>
+<html class="nojs ms lt_ie7" lang="en"><![endif]-->
+<!--[if IE 7]>
+<html class="nojs ms ie7" lang="en"><![endif]-->
+<!--[if IE 8]>
+<html class="nojs ms ie8" lang="en"><![endif]-->
+<!--[if gt IE 8]>
+<html class="nojs ms" lang="en"><![endif]-->
+<html lang="en">
+<head>
+	{% block metadata deferred %}
+	{% include "theme::partials/metadata" %}
+	{% endblock %}
+</head>
+<body class="post-template-default single single-post postid-383 single-format-standard group-blog responsive layout-full no-js has-sidebar has-menu-search page-layout-default mobilenav wpb-js-composer js-comp-ver-4.11.2 vc_responsive">
+<div id="page-wrapper">
+	{% include "theme::partials/header" %}
+	<div id="main" class="site-main">
+		<div class="full-container">
+			<!-- Breadcumb! -->
+			{% include "theme::partials/breadcrumbs" %}
+			<!-- Breadcumb! -->
+			<div id="primary" class="content-area">
+				<div id="content" class="site-content" role="main">
+					<article id="post-797" class="post-797 page type-page status-publish post">
+						<div class="entry-main">
+							<div class="entry-content">
+								{% block content %}{% endblock %}
+								
+								<!-- Begin Yuzo -->
+								{% set posts = entries('posts').recent().where('enabled',1).where('category_id',1).limit(5).get() %}
+								<div class='yuzo_related_post style-2' data-version='5.12.45'>
+									<div class='yuzo_clearfixed yuzo__title'>
+										<h3>Related Post</h3>
+									</div>
+									<div class='yuzo_wraps'>
+										{% for post in posts %}
+										<div class="relatedthumb yuzo-list" style="">
+											<a href="{{ post.route('view') }}" class="image-list" >
+												<div class="yuzo-img-wrap  ilen_shine "
+												     style="width: 97.75px;height:68px;">
+													<span class='shine-effect'></span>
+													<div class="yuzo-img" style="background:url('{{ post.image.make().url() }}') 50% 50% no-repeat;width: 97.75px;height:68px;margin-bottom: 5px;background-size:  cover;"></div>
+												</div>
+											</a>
+											<a class="link-list yuzo__text--title" href="{{ post.route('view') }}" style="font-size:14px;font-weight:bold;;line-height:22px;">
+												{{ post.title|raw }} </a>
+											<span class="yuzo_text" style="font-size:10px;">
+                                                {{ post.summary|raw }}
+                                            </span>
+										</div>
+										{% endfor %}
+										
+									</div>
+								</div>
+								<!-- Begin Yuzo -->
+							</div>
+						</div>
+					</article>
+				</div>
+			</div>
+			<div id="secondary" class="widget-area" role="complementary">
+				{% include "theme::partials/sidebar" %}
+			</div>
+		</div>
+	</div>
+	{% include "theme::partials/footer" %}
+</div>
+
+{% include "theme::partials/notification" %}
+
+{% include "theme::partials/assets" %}
+
+</body>
+</html>
+{% endhtmlcompress %}
