@@ -1,0 +1,167 @@
+{% htmlcompress %}
+<!doctype html>
+<!--[if lt IE 7]>
+<html class="nojs ms lt_ie7" lang="en"><![endif]-->
+<!--[if IE 7]>
+<html class="nojs ms ie7" lang="en"><![endif]-->
+<!--[if IE 8]>
+<html class="nojs ms ie8" lang="en"><![endif]-->
+<!--[if gt IE 8]>
+<html class="nojs ms" lang="en"><![endif]-->
+<html lang="en">
+<head>
+	{% block metadata deferred %}
+	{% include "theme::partials/metadata" %}
+	{% endblock %}
+</head>
+<body class="post-template-default single single-post postid-383 single-format-standard group-blog responsive layout-full no-js has-sidebar has-menu-search page-layout-default mobilenav wpb-js-composer js-comp-ver-4.11.2 vc_responsive">
+<div id="page-wrapper">
+	{% include "theme::partials/header" %}
+	<div id="main" class="site-main">
+		<div class="full-container">
+			<!-- Breadcumb! -->
+			{% include "theme::partials/breadcrumbs" %}
+			<!-- Breadcumb! -->
+			<div id="primary" class="content-area">
+				<div id="content" class="site-content" role="main">
+					<article id="post-797" class="post-797 page type-page status-publish post">
+						<div class="entry-main">
+							<div class="entry-content">
+								<div class="mp-row-fluid motopress-row mpce-dsbl-margin-left mpce-dsbl-margin-right">
+									<div class="mp-span12 motopress-clmn  mpce-dsbl-margin-left mpce-dsbl-margin-right">
+										<div class="motopress-code-obj">
+											<div class="wls-wrap">
+												{{ TestimoniSlickPlugin() }}
+											</div>
+											
+											{% set contacts = entries('contacts').recent().where('publish',1).get() %}
+											{% for contact in contacts %}
+											<div data-blogger-escaped-style="text-align: start;">
+												<div class="su-box su-box-style-noise" style="border-color:#292929;border-radius:3px;-moz-border-radius:3px;-webkit-border-radius:3px;">
+													<div class="su-box-title" style="background-color:#333333;color:#FFFFFF;-webkit-border-top-left-radius:2px;-webkit-border-top-right-radius:2px;-moz-border-radius-topleft:2px;-moz-border-radius-topright:2px;border-top-left-radius:2px;border-top-right-radius:2px;">
+														Segera Hubungi Kami :
+													</div>
+													<div class="su-box-content su-clearfix">
+														<h3 style="text-align: center;">
+															<span style="color: #800000;"><strong>SEGERA HUBUNGI KAMI..!!</strong></span><br/>
+															Dapatkan harga special melalui Website Kami
+														</h3>
+														<h3 style="text-align: center;"><strong>{{ contact.company }}</strong></h3>
+														<h3 style="text-align: center;"><strong>{{ contact.division }}</strong></h3>
+														<h3 style="text-align: center;"><strong>Contact Us :  <span style="color: #800000;">{{ contact.sales_name }}</span></strong></h3>
+														<h3 style="text-align: center;"><strong>Phone :   <span style="color: #800000;">{{ contact.mobile01 }}</span></strong></h3>
+													</div>
+												</div>
+											</div>
+											{% endfor %}
+										
+										</div>
+									</div>
+								</div>
+								<div class="mp-row-fluid motopress-row mpce-dsbl-margin-left mpce-dsbl-margin-right">
+									<div class="mp-span12 motopress-clmn  mpce-dsbl-margin-left mpce-dsbl-margin-right">
+										<div class="motopress-popup-obj">
+											<div data-mfp-src="#motopress-modal-content-593f49cf53640" data-delay="1000" data-mfp-show-animation="motopress-modal-animated motopress-modal-animation-rotateIn" data-mfp-hide-animation="motopress-modal-animated motopress-modal-animation-rotateOut" data-modal-style="motopress-modal-dark" class="motopress-popup-trigger " data-uniqid="593f49cf53640" data-custom-classes=" motopress-popup-basic"></div>
+											<div id="motopress-modal-content-593f49cf53640" class="mfp-hide motopress-modal-content">
+												<div class="wls-wrap">
+												
+												</div>
+												
+												{% set contacts = entries('contacts').recent().where('publish',1).get() %}
+												{% for contact in contacts %}
+													<div data-blogger-escaped-style="text-align: start;">
+														<div class="su-box su-box-style-noise" style="border-color:#292929;border-radius:3px;-moz-border-radius:3px;-webkit-border-radius:3px;">
+															<div class="su-box-title" style="background-color:#333333;color:#FFFFFF;-webkit-border-top-left-radius:2px;-webkit-border-top-right-radius:2px;-moz-border-radius-topleft:2px;-moz-border-radius-topright:2px;border-top-left-radius:2px;border-top-right-radius:2px;">
+																Segera Hubungi Kami :
+															</div>
+															<div class="su-box-content su-clearfix">
+																<h3 style="text-align: center;">
+																	<span style="color: #800000;"><strong>SEGERA HUBUNGI KAMI..!!</strong></span><br/>
+																	Dapatkan harga special melalui Website Kami
+																</h3>
+																<h3 style="text-align: center;"><strong>{{ contact.company }}</strong></h3>
+																<h3 style="text-align: center;"><strong>{{ contact.division }}</strong></h3>
+																<h3 style="text-align: center;"><strong>Contact Us :  <span style="color: #800000;">{{ contact.sales_name }}</span></strong></h3>
+																<h3 style="text-align: center;"><strong>Phone :   <span style="color: #800000;">{{ contact.mobile01 }}</span></strong></h3>
+															</div>
+														</div>
+													</div>
+												{% endfor %}
+											
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="mp-row-fluid motopress-row mpce-dsbl-margin-left mpce-dsbl-margin-right">
+									<div class="mp-span12 motopress-clmn  mpce-dsbl-margin-left mpce-dsbl-margin-right">
+										<div class="motopress-text-obj">
+											<h3 style="text-align: center;"><strong>TUNAS TOYOTA RADIN INTEN LOCATION</strong></h3>
+										</div>
+									</div>
+								</div>
+								
+								<div class="mp-row-fluid motopress-row mpce-dsbl-margin-left mpce-dsbl-margin-right">
+									<div class="mp-span12 motopress-clmn  mpce-dsbl-margin-left mpce-dsbl-margin-right">
+										<div class="motopress-google-map-obj">
+											<iframe class="" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+											        src="https://maps.google.com/maps?q=Jl.+Radin+Inten+II+No.62+Duren+Sawit+Kota+Jakarta+Timur+Daerah+Khusus+Ibukota+Jakarta&amp;t=m&amp;z=15&amp;output=embed&amp;iwloc=near">
+											</iframe>
+										</div>
+									</div>
+								</div>
+								<!--
+								<div class="mp-row-fluid motopress-row mpce-dsbl-margin-left mpce-dsbl-margin-right">
+									<div class="mp-span12 motopress-clmn  mpce-dsbl-margin-left mpce-dsbl-margin-right">
+										<div class="motopress-text-obj">
+										</div>
+									</div>
+								</div>
+								-->
+								
+								<!-- Begin Yuzo -->
+								{% set posts = entries('posts').recent().where('enabled',1).where('category_id',1).limit(5).get() %}
+								<div class='yuzo_related_post style-2' data-version='5.12.45'>
+									<div class='yuzo_clearfixed yuzo__title'>
+										<h3>Related Post</h3>
+									</div>
+									<div class='yuzo_wraps'>
+										{% for post in posts %}
+											<div class="relatedthumb yuzo-list" style="">
+												<a href="{{ post.route('view') }}" class="image-list" >
+													<div class="yuzo-img-wrap  ilen_shine "
+													     style="width: 97.75px;height:68px;">
+														<span class='shine-effect'></span>
+														<div class="yuzo-img" style="background:url('{{ post.image.make().url() }}') 50% 50% no-repeat;width: 97.75px;height:68px;margin-bottom: 5px;background-size:  cover;"></div>
+													</div>
+												</a>
+												<a class="link-list yuzo__text--title" href="{{ post.route('view') }}" style="font-size:14px;font-weight:bold;;line-height:22px;">
+													{{ post.title|raw }} </a>
+												<span class="yuzo_text" style="font-size:10px;">
+                                                {{ post.summary|raw }}
+                                            </span>
+											</div>
+										{% endfor %}
+									</div>
+								</div>
+								<!-- Begin Yuzo -->
+								
+							</div>
+						</div>
+					</article>
+				</div>
+			</div>
+			<div id="secondary" class="widget-area" role="complementary">
+				{% include "theme::partials/sidebar" %}
+			</div>
+		</div>
+	</div>
+	{% include "theme::partials/footer" %}
+</div>
+
+{% include "theme::partials/notification" %}
+
+{% include "theme::partials/assets_extra" %}
+
+</body>
+</html>
+{% endhtmlcompress %}

@@ -1,4 +1,4 @@
-<?php namespace Toyotadjakarta\SalesModule;
+<?php namespace Toyotadjakarta\ContactsModule;
 
 use Anomaly\Streams\Platform\Addon\Plugin\Plugin;
 use Twig_Environment;

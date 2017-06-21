@@ -1,5 +1,6 @@
 <?php return array (
   'Anomaly\\Streams\\Platform\\Model\\Configuration\\ConfigurationConfigurationEntryModel' => 'E:\\xampp7\\htdocs\\toyotadjakarta\\storage\\streams\\toyotadjakarta\\models\\Configuration\\ConfigurationConfigurationEntryModel.php',
+  'Anomaly\\Streams\\Platform\\Model\\Contacts\\ContactsContactsEntryModel' => 'E:\\xampp7\\htdocs\\toyotadjakarta\\storage\\streams\\toyotadjakarta\\models\\Contacts\\ContactsContactsEntryModel.php',
   'Anomaly\\Streams\\Platform\\Model\\Dashboard\\DashboardDashboardsEntryModel' => 'E:\\xampp7\\htdocs\\toyotadjakarta\\storage\\streams\\toyotadjakarta\\models\\Dashboard\\DashboardDashboardsEntryModel.php',
   'Anomaly\\Streams\\Platform\\Model\\Dashboard\\DashboardDashboardsEntryTranslationsModel' => 'E:\\xampp7\\htdocs\\toyotadjakarta\\storage\\streams\\toyotadjakarta\\models\\Dashboard\\DashboardDashboardsEntryTranslationsModel.php',
   'Anomaly\\Streams\\Platform\\Model\\Dashboard\\DashboardWidgetsEntryModel' => 'E:\\xampp7\\htdocs\\toyotadjakarta\\storage\\streams\\toyotadjakarta\\models\\Dashboard\\DashboardWidgetsEntryModel.php',

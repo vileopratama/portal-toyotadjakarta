@@ -11,6 +11,7 @@ class ToyotadjakartaModuleContactsCreateContactsFields extends Migration
      * @var array
      */
     protected $fields = [
+	    'name' => 'anomaly.field_type.text',
         'company' => 'anomaly.field_type.text',
         'publish' => [
 		    "type"   => "anomaly.field_type.boolean",

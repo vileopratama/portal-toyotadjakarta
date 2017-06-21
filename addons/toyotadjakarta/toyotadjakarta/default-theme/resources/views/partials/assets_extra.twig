@@ -1,0 +1,44 @@
+{#
+    Main CSS can be found in metadata.twig
+#}
+
+{# Core Theme Components #}
+{{ asset_add("web.js", "theme::bower/jquery/jquery.js") }}
+{{ asset_add("web.js", "theme::bower/underscore/underscore.min.js") }}
+{{ asset_add("web.js", "theme::js/layouts/vantage/mobilenav.min.js") }}
+{{ asset_add("web.js", "theme::bower/jquery-flexslider/jquery.flexslider.min.js") }}
+{{ asset_add("web.js", "theme::js/theme/jquery.theme-main.js") }}
+
+{{ asset_add("web.js", "theme::bower/motopress-content-editor-lite/js/jquery.waypoints.min.js") }}
+{{ asset_add("web.js", "theme::bower/motopress-content-editor-lite/js/jquery.magnific-popup.min.js") }}
+{{ asset_add("web.js", "theme::bower/motopress-content-editor-lite/js/mp-frontend.min.js") }}
+{# Include Scripts Loaded From Outside #}
+{% for script in asset_scripts("web.js") %}
+	{{ script|raw }}
+{% endfor %}
+
+{# Include Scripts Loaded From Outside #}
+{% for plugin_script in asset_scripts("plugins.js") %}
+	{{ plugin_script|raw }}
+{% endfor %}
+
+<script type="text/javascript">
+	jQuery( document ).ready(function($) {
+			jQuery.fn.randomize = function (selector) {
+				var $elems = selector ? $(this).find(selector) : $(this).children(),
+					$parents = $elems.parent();
+				
+				$parents.each(function () {
+					$(this).children(selector).sort(function (childA, childB) {
+						// * Prevent last slide from being reordered
+						if ($(childB).index() !== $(this).children(selector).length - 1) {
+							return Math.round(Math.random()) - 0.5;
+						}
+					}.bind(this)).detach().appendTo(this);
+				});
+				
+				return this;
+			};
+		});
+</script>
+

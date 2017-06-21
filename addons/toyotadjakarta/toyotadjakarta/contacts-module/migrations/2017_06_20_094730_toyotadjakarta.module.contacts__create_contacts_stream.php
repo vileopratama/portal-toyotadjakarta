@@ -22,6 +22,9 @@ class ToyotadjakartaModuleContactsCreateContactsStream extends Migration
      * @var array
      */
     protected $assignments = [
+	    'name' => [
+		    'required' => true,
+	    ],
         'company' => [
 		    'required' => true,
 	    ],

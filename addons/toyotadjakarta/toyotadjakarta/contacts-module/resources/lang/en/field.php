@@ -18,7 +18,7 @@ return [
         'warning'      => 'This may or may not be displayed publicly depending on how your website was built.',
     ],
     'phone'            => [
-		'name'         => 'Model',
+		'name'         => 'Office Phone',
 		'instructions' => 'Specify a short descriptive title for this post.',
 	],
     'fax'            => [
@@ -43,11 +43,11 @@ return [
     ],
     
     'mobile01'            => [
-		'name'         => 'Mobile Phone 1',
+		'name'         => 'Mobile Phone',
 		'instructions' => 'Specify a short descriptive title for this post.',
 	],
     'mobile02'            => [
-		'name'         => 'Mobile Phone 2',
+		'name'         => 'Mobile Phone',
 		'instructions' => 'Specify a short descriptive title for this post.',
 	],
     'personal_email'            => [

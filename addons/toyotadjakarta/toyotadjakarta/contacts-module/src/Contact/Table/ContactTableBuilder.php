@@ -17,14 +17,23 @@ class ContactTableBuilder extends TableBuilder
      *
      * @var array|string
      */
-    protected $filters = [];
+    protected $filters = [
+    	'company',
+	    'sales_name'
+    ];
 
     /**
      * The table columns.
      *
      * @var array|string
      */
-    protected $columns = [];
+    protected $columns = [
+	    'entry.photo.preview(100,100)',
+	    'sales_name',
+	    'company',
+	    'mobile01',
+	    'entry.publish.toggle',
+    ];
 
     /**
      * The table buttons.
