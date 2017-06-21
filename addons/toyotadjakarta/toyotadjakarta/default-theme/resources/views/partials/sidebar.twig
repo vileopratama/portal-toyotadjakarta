@@ -1,6 +1,6 @@
 <aside id="search-2" class="widget widget_search">
-	<form method="get" class="searchform" action="http://localhost/" role="search">
-		<input type="text" class="field" name="s" value="" placeholder="Search"/>
+	<form method="get" class="searchform" action="{{ url('search') }}" role="search">
+		<input type="text" class="field" name="s" value="{{ request_get('s') }}" placeholder="Search"/>
 	</form>
 </aside>
 {% set banners = entries('sales','banners').where('publish',1).get() %}

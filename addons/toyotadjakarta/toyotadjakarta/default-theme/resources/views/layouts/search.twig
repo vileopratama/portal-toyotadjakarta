@@ -1,0 +1,44 @@
+{% htmlcompress %}
+<!doctype html>
+<!--[if lt IE 7]>
+<html class="nojs ms lt_ie7" lang="en"><![endif]-->
+<!--[if IE 7]>
+<html class="nojs ms ie7" lang="en"><![endif]-->
+<!--[if IE 8]>
+<html class="nojs ms ie8" lang="en"><![endif]-->
+<!--[if gt IE 8]>
+<html class="nojs ms" lang="en"><![endif]-->
+<html lang="en">
+<head>
+	{% block metadata deferred %}
+	{% include "theme::partials/metadata" %}
+	{% endblock %}
+</head>
+<body class="post-template-default single single-post postid-383 single-format-standard group-blog responsive layout-full no-js has-sidebar has-menu-search page-layout-default mobilenav wpb-js-composer js-comp-ver-4.11.2 vc_responsive">
+<div id="page-wrapper">
+	{% include "theme::partials/header" %}
+	<div id="main" class="site-main">
+		<div class="full-container">
+			<!-- Breadcumb! -->
+			{% include "theme::partials/breadcrumbs" %}
+			<!-- Breadcumb! -->
+			<div id="primary" class="content-area">
+				<div id="content" class="site-content" role="main">
+					{% block content %}{% endblock %}
+				</div>
+			</div>
+			<div id="secondary" class="widget-area" role="complementary">
+				{% include "theme::partials/sidebar" %}
+			</div>
+		</div>
+	</div>
+	{% include "theme::partials/footer" %}
+</div>
+
+{% include "theme::partials/notification" %}
+
+{% include "theme::partials/assets" %}
+
+</body>
+</html>
+{% endhtmlcompress %}

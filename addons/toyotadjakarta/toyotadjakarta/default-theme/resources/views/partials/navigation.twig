@@ -5,8 +5,8 @@
             <div id="search-icon-icon">
                 <div class="vantage-icon-search"></div>
             </div>
-            <form method="get" class="searchform" action="http://template.promo-toyota-mobil.com/" role="search">
-                <input type="text" class="field" name="s" value="" placeholder="Search"/>
+            <form method="get" class="searchform" action="{{ url('search') }}" role="search">
+                <input type="text" class="field" name="s" value="{{ request_get('s') }}" placeholder="Search"/>
             </form>
         </div>
         <div id="so-mobilenav-standard-1" data-id="1" class="so-mobilenav-standard"></div>

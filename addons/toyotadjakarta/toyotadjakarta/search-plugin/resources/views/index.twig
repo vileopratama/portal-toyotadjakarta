@@ -1,0 +1,35 @@
+{% extends layout('search') %}
+{% block content %}
+	<header class="page-header">
+		<h1 id="page-title">Search Results for: <span>{{ request_get('s') }}</span></h1>
+	</header>
+	
+	{% set posts = entries('posts').search(request_get('s')).paginate() %}
+	
+	{% for post in posts %}
+	<article id="post-1000" class="post-1000 post type-post status-publish format-standard hentry">
+		<div class="entry-main">
+			<header class="entry-header">
+				<h1 class="entry-title">
+					<a href="{{ post.route('view') }}" title="{{ post.title }}" rel="bookmark">{{ post.title }}</a>
+				</h1>
+				<div class="entry-meta">
+					Posted on <a href="https://www.toyotadjakarta.com/2017/01/paket-dp-murah-toyota.html" title="12:55"
+					             rel="bookmark">
+						<time class="entry-date" datetime="2017-01-24T12:55:50+00:00">24/01/2017</time>
+					</a>
+					<time class="updated" datetime="2017-03-06T06:35:08+00:00">06/03/2017</time>
+					<span class="byline"> by <span class="author vcard"><a class="url fn n"
+					                                                       href="https://www.toyotadjakarta.com/author/fitri"
+					                                                       title="View all posts by Nelli Fitri"
+					                                                       rel="author">Nelli Fitri</a></span></span>
+				</div><!-- .entry-meta -->
+			</header><!-- .entry-header -->
+			<div class="entry-summary">
+				{{ post.summary|raw }}
+			</div>
+		</div><!-- .entry-summary -->
+	</article>
+	{% endfor %}
+
+{% endblock %}
