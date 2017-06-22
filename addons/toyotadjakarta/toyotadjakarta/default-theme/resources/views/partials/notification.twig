@@ -4,7 +4,7 @@
     <h2>Contact to us : {{ contact.sales_name }}</h2>
     <ul id="scb-directs">
         <li id="scb-phone"><a href="tel:{{ contact.mobile01 }}"><img src="{{ image_url('theme::img/phone_bright.svg') }}" alt="Phone Number" width="20" height="20">&nbsp;<span>{{ contact.mobile01 }}</span></a></li>
-        <li id="scb-cellphone"><a href="tel:{{ contact.mobile02 }}"><img src="{{ image_url('theme::img/cellphone_bright.svg') }}" alt="Cell Phone Number" width="20" height="20">&nbsp;<span>0{{ contact.mobile02 }}</span></a></li>
+        <li id="scb-cellphone"><a href="tel:{{ contact.mobile02 }}"><img src="{{ image_url('theme::img/cellphone_bright.svg') }}" alt="Cell Phone Number" width="20" height="20">&nbsp;<span>{{ contact.mobile02 }}</span></a></li>
         <li id="scb-email"><a href="mailto:{{ contact.personal_email }}"><img src="{{ image_url('theme::img/email_bright.svg') }}" alt="E-Mail" width="20" height="20">&nbsp;<span>{{ contact.personal_email }}</span></a></li>
     </ul>
 </div>
