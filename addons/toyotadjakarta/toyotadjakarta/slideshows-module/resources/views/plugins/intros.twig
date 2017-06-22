@@ -1,8 +1,8 @@
-{{ asset_add("plugins.css","toyotadjakarta.module.slideshows::bower/prettyphoto/css/prettyPhoto.min.css") }}
-{{ asset_add("plugins.js","toyotadjakarta.module.slideshows::bower/prettyphoto/js/jquery.prettyPhoto.min.js") }}
+{{ asset_add("plugins.css","toyotadjakarta.module.slideshows::bower/js_composer/css/js_composer.min.css") }}
+{{ asset_add("plugins.css","toyotadjakarta.module.slideshows::bower/prettyphoto/css/prettyPhoto.css") }}
+{{ asset_add("plugins.js","toyotadjakarta.module.slideshows::bower/prettyphoto/js/jquery.prettyPhoto.js") }}
+{{ asset_add("plugins.js","toyotadjakarta.module.slideshows::bower/js_composer/js/js_composer_front.min.js") }}
 {{ asset_add("plugins.js","toyotadjakarta.module.slideshows::bower/js_composer/js/waypoints.min.js") }}
-{{ asset_add("plugins.js","toyotadjakarta.module.slideshows::bower/js_composer/js/vc_grid.min.js") }}
-
 
 {% set intros = entries('slideshows','intros').where('publish',1).get() %}
 {% for intro in intros %}
@@ -14,7 +14,7 @@
 				<div
 					class="wpb_single_image wpb_content_element vc_align_center wpb_animate_when_almost_visible wpb_appear">
 					<figure class="wpb_wrapper vc_figure">
-						<a rel="prettyPhoto[rel-797-1532007293]"
+						<a rel="prettyPhoto[{{intro.id}}]"
 						   href="{{ intro.image.make().url() }}"
 						   target="_self"
 						   class="vc_single_image-wrapper vc_box_border_circle vc_box_border_grey prettyphoto">

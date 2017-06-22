@@ -1,0 +1,62 @@
+{#
+    Main CSS can be found in metadata.twig
+#}
+
+{# Core Theme Components #}
+{{ asset_add("web.js", "theme::bower/jquery/jquery.js") }}
+{{ asset_add("web.js", "theme::bower/underscore/underscore.min.js") }}
+{{ asset_add("web.js", "theme::js/layouts/vantage/mobilenav.min.js") }}
+{{ asset_add("web.js", "theme::bower/jquery-flexslider/jquery.flexslider.min.js") }}
+{{ asset_add("web.js", "theme::js/theme/jquery.theme-main.js") }}
+{# Include Scripts Loaded From Outside #}
+{% for script in asset_scripts("web.js") %}
+    {{ script|raw }}
+{% endfor %}
+
+{# Include Scripts Loaded From Outside #}
+{% for plugin_script in asset_scripts("plugins.js") %}
+    {{ plugin_script|raw }}
+{% endfor %}
+
+{{ asset_add("plugins.css","toyotadjakarta.module.slideshows::bower/prettyphoto/css/prettyPhoto.min.css") }}
+{{ asset_add("plugins.js","toyotadjakarta.module.slideshows::bower/js_composer/js/js_composer_front.min.js") }}
+{{ asset_add("plugins.js","toyotadjakarta.module.slideshows::bower/prettyphoto/js/jquery.prettyPhoto.min.js") }}
+{{ asset_add("plugins.js","toyotadjakarta.module.slideshows::bower/js_composer/js/waypoints.min.js") }}
+{{ asset_add("plugins.js","toyotadjakarta.module.slideshows::bower/js_composer/js/vc_grid.min.js") }}
+{{ asset_add("plugins.css","toyotadjakarta.module.slideshows::bower/js_composer/css/js_composer.min.css") }}
+
+
+
+
+{{ asset_add("plugins.css","toyotadjakarta.module.slideshows::bower/prettyphoto/css/prettyPhoto.min.css") }}
+{{ asset_add("plugins.js","toyotadjakarta.module.slideshows::bower/js_composer/js/js_composer_front.min.js") }}
+{{ asset_add("plugins.js","toyotadjakarta.module.slideshows::bower/prettyphoto/js/jquery.prettyPhoto.min.js") }}
+{{ asset_add("plugins.js","toyotadjakarta.module.slideshows::bower/js_composer/js/waypoints.min.js") }}
+{{ asset_add("plugins.js","toyotadjakarta.module.slideshows::bower/js_composer/js/vc_grid.min.js") }}
+{{ asset_add("plugins.css","toyotadjakarta.module.slideshows::bower/js_composer/css/js_composer.min.css") }}
+
+
+
+
+
+{{ asset_add("style.css", "theme::scss/font-awesome/font-awesome.scss", ["parse"]) }}
+{{ asset_add("style.css", "theme::css/layouts/vantage/style.css") }}
+{{ asset_add("style.css", "theme::css/layouts/vantage/mobilenav.css") }}
+{{ asset_add("style.css", "theme::css/layouts/yuzo/style.css") }}
+{{ asset_add("style.css", "theme::bower/motopress-content-editor-lite/css/theme.min.css") }}
+{{ asset_add("style.css", "theme::bower/motopress-content-editor-lite/css/bootstrap-grid.min.css") }}
+{{ asset_add("style.css", "theme::bower/shortcodes-ultimate/css/box-shortcodes.css") }}
+{{ asset_add("style.css", "theme::bower/jetpack/css/jetpack.css") }}
+
+{{ asset_add("web.js", "theme::bower/jquery/jquery.js") }}
+{{ asset_add("web.js", "theme::bower/underscore/underscore.min.js") }}
+{{ asset_add("web.js", "theme::js/layouts/vantage/mobilenav.min.js") }}
+{{ asset_add("web.js", "theme::bower/jquery-flexslider/jquery.flexslider.min.js") }}
+{{ asset_add("web.js", "theme::js/theme/jquery.theme-main.js") }}
+
+
+{{ asset_add("plugins.css","toyotadjakarta.module.sales::bower/vendor/slick-carousel/slick.css") }}
+{{ asset_add("plugins.css","toyotadjakarta.module.sales::bower/vendor/slick-carousel/slick-theme.css") }}
+{{ asset_add("plugins.css","toyotadjakarta.module.sales::bower/vendor/slick-carousel/wen-logo-slider-public.css") }}
+{{ asset_add("plugins.js","toyotadjakarta.module.sales::bower/vendor/slick-carousel/slick.min.js") }}
+{{ asset_add("plugins.js","toyotadjakarta.module.sales::bower/plugins/testimoni_slick/js/testimoni_slick_main.js") }}

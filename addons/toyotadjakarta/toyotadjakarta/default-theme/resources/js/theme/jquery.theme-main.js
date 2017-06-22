@@ -188,7 +188,7 @@ jQuery(function($){
     } );
 
     // The menu hover effects
-    $('#masthead')
+    jQuery('#masthead')
         .on('mouseenter', '.main-navigation ul li', function(){
             var $$ = $(this);
             var $ul = $$.find('> ul');
