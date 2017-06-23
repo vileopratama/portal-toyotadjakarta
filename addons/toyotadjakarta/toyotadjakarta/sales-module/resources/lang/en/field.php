@@ -41,5 +41,9 @@ return [
 		'name'         => 'Price',
 		'instructions' => 'Specify a short descriptive title for this post.',
 	],
+	'website'            => [
+		'name'         => 'Website',
+		'instructions' => 'Specify a short descriptive title for this post.',
+	],
 
 ];
